@@ -1,0 +1,1926 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>rfs API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>rfs</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from sklearn.linear_model import LogisticRegression
+from statsmodels.tools.sm_exceptions import ConvergenceWarning
+import warnings
+warnings.simplefilter(&#39;ignore&#39;, ConvergenceWarning)
+
+import numpy as np
+import pandas as pd
+from dcor import distance_correlation
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.model_selection import train_test_split
+import statsmodels.discrete.discrete_model as sm
+import warnings
+from utils import model_score
+from sklearn.svm import SVC
+from sklearn.utils.validation import check_is_fitted
+from sklearn.utils import _safe_indexing
+
+SVM_classifier = SVC(kernel=&#39;linear&#39;)
+
+class RFS(BaseEstimator, TransformerMixin):
+    &#34;&#34;&#34;
+    Transformer that performs Randomized Feature Selection (RFS).
+
+    Read more in the official documentation of the Python package.
+
+    Parameters
+    ----------
+    n_models : int
+        Number of models generated per iteration. Default=100.
+    n_iters : int
+        Number of iterations. Default is 300.
+    tuning : float
+        Learning rate that dictates the speed of regressor inclusion probability (rip) convergence.
+        Smaller values -&gt; slower convergence. Default is 10.
+    tol : float
+        Tolerance condition. Default is 0.002.
+    alpha : float
+        Significance level for model pruning. Default is 0.99.
+    rip_cutoff : float
+        Determines rip threshold for feature inclusion in final model. Default=1.
+    metric : str
+        Optimization metric. Default=&#39;roc_auc&#39;. Options: &#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;.
+    mu_init : dict
+        Dictionary containing user-assigned RIPs. If None, RIPs are initialised to 1/n_features.
+    method : str
+        RFSC method. Options (str): &#39;dcor&#39;, &#39;logit&#39;, &#39;L1_logit&#39;. Refer to the package documentation for more details.
+    estimator : estimator instance, optional
+        An unfitted estimator. Used for evaluation of the model with selected features.
+        If method &#39;dcor&#39;, estimator is not used. Default is SVC(kernel=&#39;linear&#39;)
+    verbose : bool
+        Provides extra information. Default is False.
+    &#34;&#34;&#34;
+
+    def __init__(self,
+            n_models: int=100,
+            n_iters: int=300,
+            tuning: float=10,
+            tol: float=0.002,
+            alpha: float=0.99,
+            rip_cutoff: float=1,
+            metric: str=&#39;roc_auc&#39;,
+            mu_init: dict=None,
+            method = &#34;logit&#34;,
+            estimator = SVM_classifier,
+            verbose: bool=False,
+        ):
+        self.n_models = n_models
+        self.n_iters = n_iters
+        self.tol = tol
+        self.alpha = alpha
+        self.tuning = tuning
+        self.rip_cutoff = rip_cutoff
+        self.metric = metric
+        self.mu_init = mu_init
+        self.method = method
+        self.estimator = estimator
+        self.verbose = verbose
+
+        if self.metric not in [&#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;]:
+            raise ValueError(f&#34;metric must be one of &#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;. Received: {self.metric} &#34;)
+        if self.method not in [&#39;logit&#39;, &#39;L1_logit&#39;, &#39;dcor&#39;]:
+            raise ValueError(f&#34;method must be one of &#39;logit&#39;, &#39;L1_logit&#39;, &#39;dcor&#39;. Received: {self.method}&#34;)
+        if not isinstance(self.n_models, int) and self.n_models &lt;= 0:
+            raise TypeError(f&#34;n_models parameter must be an integer greater than 0. Received: {type(self.n_models)}&#34;)
+        if not isinstance(self.n_iters, int) and self.n_iters &lt;= 0:
+            raise TypeError(f&#34;n_iters parameter must be an integer greater than 0. Received: {type(self.n_iters)}&#34;)
+        if self.tol &lt; 0:
+            raise ValueError(f&#34;tol parameter must be a positive number. Received: {self.tol}&#34;)
+        if not 0 &lt; self.alpha &lt; 1:
+            raise ValueError(f&#34;alpha parameter must be between 0 and 1. Received: {self.alpha}&#34;)
+        if self.tuning &lt; 0:
+            raise ValueError(f&#34;tuning parameter must be a positive number. Received: {self.tuning}&#34;)
+        if not 0 &lt; self.rip_cutoff &lt;= 1:
+            raise ValueError(f&#34;rip_cutoff parameter must be between 0 and 1. Received: {self.rip_cutoff}&#34;)
+        if not hasattr(self.estimator, &#39;fit&#39;):
+            raise ValueError(&#34;estimator must be an estimator instance with a fit method.&#34;)
+
+
+        print(
+            f&#34;{self.__class__.__name__} Initialised with with parameters: \n \
+            n_models = {n_models}, \n \
+            n_iters = {n_iters}, \n \
+            method = {method}, \n \
+            estimator = {estimator}, \n \
+            mu_init = {mu_init}, \n \
+            tuning = {tuning}, \n \
+            tol = {tol}, \n \
+            rip_cutoff = {rip_cutoff}, \n \
+            metric = {metric}, \n \
+            alpha = {alpha} \n ------------&#34;
+        ) if self.verbose else None
+
+    def __repr__(self) -&gt; str:
+        &#34;&#34;&#34;
+        Returns a string representation of the object. It includes the class name and the values of the instance variables.
+
+        Returns
+        -------
+        str
+            The string representation of the object.
+        &#34;&#34;&#34;
+        return (f&#34;{self.__class__.__name__}(n_models={self.n_models}, n_iters={self.n_iters}, \n \
+               method = {self.method}, estimator = {self.estimator}, tuning={self.tuning}, \n \
+               metric={self.metric}, alpha={self.alpha}), mu_init = {self.mu_init},  tol = {self.tol}, \n \
+               rip_cutoff = {self.rip_cutoff}&#34;)
+
+
+    def fit(self, X, y):
+        &#34;&#34;&#34;
+        Learn the features to select from X.
+
+        This is the main part of RFS algorithm. It extracts the model populations and evaluates
+        them on the validation set, and updates the feature inclusion probabilities accordingly.
+
+        Parameters
+        ----------
+        X : array-like of shape (n_samples, n_features)
+            Training vectors, where `n_samples` is the number of samples and
+            `n_features` is the number of predictors.
+
+        y : array-like of shape (n_samples,)
+            Target values.
+
+        Returns
+        -------
+        self : object
+            Returns the instance itself.
+        &#34;&#34;&#34;
+        perf_break = False
+        self.perf_check = 0
+        self.rnd_feats = {}
+        self.sig_feats = {}
+        avg_model_size = np.empty((0,))
+        avg_performance = np.empty((0,))
+
+        _, self.n_features  = np.shape(X)
+        if self.mu_init is None:
+          self.mu_init = (1/self.n_features) * np.ones((self.n_features))
+
+        mu = self.mu_init
+
+        X_train, X_val, Y_train, Y_val = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+
+
+        for t in range(self.n_iters):
+            mask, performance_vector, size_vector = self.generate_models(
+                                                            X_train=X_train,
+                                                            Y_train=Y_train,
+                                                            X_val=X_val,
+                                                            Y_val=Y_val,
+                                                            mu=mu
+                                                        )
+            mu_update = self.update_feature_probability(
+                            mask=mask,
+                            performance=performance_vector,
+                            mu=mu
+                        )
+            avg_model_size = np.append(avg_model_size, np.mean(size_vector.ravel()[np.flatnonzero(performance_vector)]))
+            avg_performance = np.append(avg_performance, np.mean(performance_vector.ravel()[np.flatnonzero(performance_vector)]))
+
+            if perf_check(t, avg_performance, self.tol):
+                self.perf_check += 1
+            else:
+                self.perf_check = 0
+
+            print(f&#34;iter: {t}, avg model size: {avg_model_size[t]:.2f}, avg perf is: {avg_performance[t]:.5f}, tol not reached, max diff is: {np.abs(mu_update - mu).max():.5f}, perf check: {self.perf_check}.&#34;) if self.verbose else None
+
+            if tol_check(mu_update, mu, self.tol): # stop if tolerance is reached.
+                print(f&#34;Tol reached. Number of features above rip_cutoff is {np.count_nonzero(mu_update&gt;=self.rip_cutoff)}&#34;)
+                break
+
+            elif self.perf_check &gt;= 2:
+                perf_break = True
+                break
+
+            mu = mu_update
+
+        self.iters = t
+        if perf_break is True:
+            sorted_items = sorted(self.sig_feats.items(), key=lambda item: item[1], reverse=True)
+            self.features_ = sorted_items[0][0]  # Get the key (features) with the highest performance
+
+        else:
+            self.features_ = select_model(mu=mu, rip_cutoff=self.rip_cutoff)
+            #case no feature meets the threshold
+            if len(self.features_) == 0:
+                self.features_ = list(np.nonzero(mu)[0])
+
+        #If none of the features are selected, then choose n_feats features with the highest mu_init values
+        if len(self.features_) == 0:
+            n_feats = self.n_features if self.n_features &lt; 10 else int(self.n_features*0.3)
+
+            indices_and_values = sorted(enumerate(self.mu_init), key=lambda x: x[1], reverse=True)
+            max_indices = [index for index, value in indices_and_values[:n_feats]]
+            self.features_ = max_indices
+
+        if self.method == &#34;dcor&#34;:
+            self.best_performance_ = distance_correlation(X_train[:, self.features_], Y_train)
+        if self.method in [&#34;logit&#34;, &#34;L1_logit&#34;]:
+            model = sm.Logit(Y_train, X_train[:, self.features_]).fit_regularized(method=&#39;l1&#39;, alpha=0.1)
+            prediction = model.predict(X_val[:, self.features_])
+
+            self.best_performance_ = model_score(
+                method=self.metric,
+                y_true=Y_val,
+                y_pred_label=prediction.round(),
+                y_pred_prob=prediction
+            )
+        return self
+
+    def update_feature_probability(
+        self,
+        mask: np.ndarray,
+        performance: np.ndarray,
+        mu: np.ndarray
+    ) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        Updates the feature probability vector mu based on the performance of the models generated.
+
+        Parameters
+        ----------
+        mask : np.ndarray
+            Matrix of shape (n_models, n_features) containing the mask of the models generated.
+        performance : np.ndarray
+            Performance evaluation for each model.
+        mu : np.ndarray
+            Current feature probability vector.
+
+        Returns
+        -------
+        mu_update : np.ndarray
+            Updated feature probability vector.
+        &#34;&#34;&#34;
+        features_incld = np.sum(mask, axis=0) #(n_features,)
+        features_excld = (np.ones(len(mu)) * self.n_models) - features_incld #(n_features,)
+        features_performance = performance @ mask #(n_features,)
+
+        ## evaluate importance of features
+        with np.errstate(divide=&#39;ignore&#39;, invalid=&#39;ignore&#39;):
+            E_J_incld = features_performance / features_incld
+            E_J_excld = (np.sum(performance) - features_performance) / features_excld
+
+        # for where features not chosen in any models
+        E_J_incld[np.isnan(E_J_incld)] = 0
+        E_J_excld[np.isnan(E_J_excld)] = 0
+        E_J_excld[np.isinf(E_J_excld)] = 0
+
+        gamma = gamma_update(performance=performance, tuning=self.tuning)
+        _mu = mu + gamma*(E_J_incld - E_J_excld)
+        return np.clip(_mu, 0, 1)
+
+    def generate_models(
+            self,
+            X_train: np.ndarray,
+            Y_train: np.ndarray,
+            X_val: np.ndarray,
+            Y_val: np.ndarray,
+            mu: np.ndarray
+        ):
+        &#34;&#34;&#34;
+        Generates random models and for each model evaluates the significance of each feature.
+        Statistically significant features are retained and resultant model&#39;s performance on validation partition is
+        evaluated and stored.
+
+        Parameters
+        ----------
+        X_train : np.ndarray
+            Training data.
+        Y_train : np.ndarray
+            Training labels.
+        X_val : np.ndarray
+            Validation data.
+        Y_val : np.ndarray
+            Validation labels.
+        mu : np.ndarray
+            Array of regressor inclusion probabilities of each feature.
+
+        Returns
+        -------
+        mask_mtx : np.ndarray
+            Matrix containing 1 in row i at column j if feature j was included in model i, else 0.
+        performance_vector : np.ndarray
+            Array containing performance of each model.
+        size_vector : np.ndarray
+            Array containing number of features in each model.
+        &#34;&#34;&#34;
+
+        if isinstance(X_train, pd.DataFrame):
+          X_train = X_train.to_numpy()
+        if isinstance(Y_train, pd.DataFrame):
+          Y_train = Y_train.to_numpy()
+        if isinstance(X_val, pd.DataFrame):
+          X_val = X_val.to_numpy()
+        if isinstance(Y_val, pd.DataFrame):
+          Y_val = Y_val.to_numpy()
+
+        mask = np.empty((0,))
+        mask_mtx = np.zeros((len(mu),)) # mask matrix
+        performance_vector = np.zeros((self.n_models,))# performance vector
+        size_vector = np.zeros((self.n_models,)) # average model size vector
+        #mu[0] = 1 # set bias term to 1
+
+        for i in range(self.n_models):
+            count = 0
+            mask_vector = np.zeros((len(mu),))
+            while True:
+                generated_features = generate_model(mu)
+                if len(generated_features) &lt; 1:
+                    old_mu_0 = mu[0]
+                    mu[0] = 1
+                    generated_features = generate_model(mu)
+                    mu[0] = old_mu_0
+
+                if tuple(generated_features) not in self.rnd_feats.keys(): # check if model has been generated before
+                    if self.method == &#34;logit&#34;:
+                      logreg_init = sm.Logit(
+                                        Y_train,
+                                        X_train[:, generated_features]
+                                    ).fit(disp=False, method=&#39;lbfgs&#39;)
+                      #Statistical Test for Regressor Significance
+                      #The rejection of redundant terms is a crucial step in the identification procedure.
+                      significant_features = prune_model(
+                                                model=logreg_init,
+                                                feature_ids=generated_features,
+                                                alpha=self.alpha
+                                            )
+
+                    elif self.method == &#34;L1_logit&#34;:
+                      lr = LogisticRegression(penalty=&#39;l1&#39;, solver=&#39;liblinear&#39;, max_iter=1000)
+                      lr.fit(X_train[:, generated_features], Y_train)
+                      significant_features = np.where(lr.coef_[0] != 0)[0]
+
+                    elif self.method == &#34;dcor&#34;:
+                      significant_features = generated_features
+
+                    self.rnd_feats[tuple(generated_features)] = significant_features
+
+                else: # if model has been generated before, use the stored significant features
+                    significant_features = self.rnd_feats[tuple(generated_features)]
+
+                if len(significant_features) &gt; 1:
+                    break
+
+                count += 1
+                if count &gt; 1000:
+                    self.alpha -= 0.05
+                    warnings.warn(&#34;The significance level alpha was reduced by 0.05&#34;)
+
+
+            size_vector[i] = len(significant_features)
+            mask_vector[significant_features] = 1
+            mask = np.concatenate((mask, mask_vector), axis=0)
+
+            if tuple(significant_features) not in self.sig_feats.keys(): # check if model has been evaluated before
+                if self.method in [&#34;L1_logit&#34;, &#34;logit&#34;]:
+                    model = self.estimator.fit(X_train[:, significant_features], Y_train)
+                    prediction = model.predict(X_val[:, significant_features])
+
+                    performance_vector[i] = model_score(
+                                              method=self.metric,
+                                              y_true=Y_val,
+                                              y_pred_label=prediction.round(),
+                                              y_pred_prob=prediction
+                                          )
+                elif self.method == &#34;dcor&#34;:
+                    performance_vector[i] = distance_correlation(X_train[:, significant_features], Y_train)
+
+                self.sig_feats[tuple(significant_features)] = performance_vector[i]
+
+            else: # if model has been evaluated before, used the stored performance
+                performance_vector[i] = self.sig_feats[tuple(significant_features)]
+
+        mask_mtx = np.reshape(mask, (len(performance_vector), len(mu)))
+        return mask_mtx, performance_vector, size_vector
+
+    def get_support(self, indices = False):
+        &#34;&#34;&#34;
+        Get the feature support mask or indices.
+
+        Parameters
+        ----------
+        indices : bool, optional
+            If True, returns the indices of the supported features.
+            If False (default), returns a boolean mask indicating supported features.
+
+        Returns
+        -------
+        numpy.ndarray
+            If indices is True, a numpy array containing the indices of the supported features.
+            If indices is False, a boolean mask indicating supported features.
+
+        Raises
+        ------
+        NotFittedError
+            If the estimator is not fitted.
+        &#34;&#34;&#34;
+        check_is_fitted(self)
+        mask = np.zeros(self.n_features, dtype=bool)
+        mask[list(self.features_)] = True
+        return self.features_ if indices else mask
+
+    def get_best_performance(self):
+        &#34;&#34;&#34;
+        Retrieve the best performance achieved.
+        This method returns the performance of the model with selected features.
+
+        Returns
+        -------
+        float
+            The best performance value if available, otherwise 0.
+        &#34;&#34;&#34;
+        return self.best_performance_ if self.best_performance_ is not None else 0
+
+
+    def transform(self, X):
+        &#34;&#34;&#34;
+        Reduce X to the selected features.
+
+        Parameters
+        ----------
+        X : array of shape [n_samples, n_features]
+            The input samples.
+
+        Returns
+        -------
+        array of shape [n_samples, n_selected_features]
+            The input samples with only the selected features.
+        &#34;&#34;&#34;
+        mask = self.get_support()
+        if not mask.any():
+            warnings.warn(
+                (
+                    &#34;No features were selected: either the data is&#34;
+                    &#34; too noisy or the selection test too strict.&#34;
+                ),
+                UserWarning,
+            )
+            if hasattr(X, &#34;iloc&#34;):
+                return X.iloc[:, :0]
+            return np.empty(0, dtype=X.dtype).reshape((X.shape[0], 0))
+        return _safe_indexing(X, mask, axis=1)
+
+
+def select_model(mu: np.ndarray, rip_cutoff: float) -&gt; list:
+    &#34;&#34;&#34;
+    Selects final model based on features that are above the regressor inclusion probability (rip) threshold.
+
+    Parameters
+    ----------
+    mu : np.ndarray
+        Current feature probability vector.
+    rip_cutoff : float
+        Regressor inclusion probability threshold.
+
+    Returns
+    -------
+    list
+        List of features that are above the rip threshold.
+    &#34;&#34;&#34;
+    return list((mu &gt;= rip_cutoff).nonzero()[0])
+
+def tol_check(mu_update: np.ndarray, mu: np.ndarray, tol: float):
+    &#34;&#34;&#34;
+    Checks if maximum difference between mu vectors is below tolerance threshold.
+
+    Parameters
+    ----------
+    mu_update : np.ndarray
+        Mu at the iteration t+1.
+    mu : np.ndarray
+        Mu at the iteration t.
+    tol : float
+        Tolerance condition.
+
+    Returns
+    -------
+    bool
+        True max difference below tolerance, else False.
+    &#34;&#34;&#34;
+    return np.abs(mu_update - mu).max() &lt; tol
+
+def perf_check(iter: int, avg_perf: np.ndarray, tol: float) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks if performance has converged based on tolerance threshold.
+
+    Parameters
+    ----------
+    iter : int
+        Current iteration.
+    avg_perf : np.ndarray
+        Average performance vector.
+    tol : float
+        Tolerance condition.
+
+    Returns
+    -------
+    bool
+        True if performance converged
+        (difference between average performance of two consecutive iterations is less than or equal to tol), else False.
+    &#34;&#34;&#34;
+    return iter &gt; 2 and np.abs(avg_perf[iter] - avg_perf[iter-1]) &lt;= tol
+
+def gamma_update(
+        performance: np.ndarray,
+        tuning: float=10
+    ) -&gt; float:
+    &#34;&#34;&#34;
+    Scale the update of the feature probability vector.
+
+    Parameters
+    ----------
+    performance : np.ndarray
+        Performance evaluation for each model.
+    tuning : float, optional
+        Tuning parameter to adjust convergence rate, default=10.
+
+    Returns
+    -------
+    gamma : float
+        Scaling factor for the update of the feature probability vector.
+    &#34;&#34;&#34;
+    return 1/(tuning*(np.max(performance) - np.mean(performance)) + 0.1)
+
+def prune_model(
+        model: object,
+        feature_ids: list,
+        alpha: float
+    ) -&gt; list:
+    &#34;&#34;&#34;
+    Tests whether features are significant at selected significance level. Returns index of significant features.
+
+    Parameters
+    ----------
+    model : object
+        Logistic regression model object. See statsmodels.api.Logit.
+    feature_ids : list
+        Feature ids included in the model.
+    alpha : float
+        (0,1) significance level.
+
+    Returns
+    -------
+    list
+        List of features above the significance level.
+    &#34;&#34;&#34;
+    return list(set(feature_ids[np.where(model.pvalues&lt;=alpha)]))
+
+def generate_model(mu: np.ndarray) -&gt; np.ndarray:
+    &#34;&#34;&#34;
+    Takes a vector of probabilities and returns a random model.
+
+    Parameters
+    ----------
+    mu : np.ndarray
+        Array of probabilities for each feature.
+
+    Returns
+    -------
+    index : np.ndarray
+        Randomly generated numbers corresponding to features ids based on probabilities.
+        Array of selected features - their indices.
+
+    Raises
+    ------
+    ValueError
+        Array of probabilities has all zero probabilities.
+    &#34;&#34;&#34;
+    if np.count_nonzero(mu) == 0:
+        raise ValueError(&#34;mu cannot be all zeros&#34;)
+
+    index= [0]
+    while len(index) &lt;= 1:
+        index = np.flatnonzero(np.random.binomial(1,mu))
+    return index</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="rfs.gamma_update"><code class="name flex">
+<span>def <span class="ident">gamma_update</span></span>(<span>performance: numpy.ndarray, tuning: float = 10) ‑> float</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Scale the update of the feature probability vector.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>performance</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Performance evaluation for each model.</dd>
+<dt><strong><code>tuning</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Tuning parameter to adjust convergence rate, default=10.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>gamma</code></strong> :&ensp;<code>float</code></dt>
+<dd>Scaling factor for the update of the feature probability vector.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def gamma_update(
+        performance: np.ndarray,
+        tuning: float=10
+    ) -&gt; float:
+    &#34;&#34;&#34;
+    Scale the update of the feature probability vector.
+
+    Parameters
+    ----------
+    performance : np.ndarray
+        Performance evaluation for each model.
+    tuning : float, optional
+        Tuning parameter to adjust convergence rate, default=10.
+
+    Returns
+    -------
+    gamma : float
+        Scaling factor for the update of the feature probability vector.
+    &#34;&#34;&#34;
+    return 1/(tuning*(np.max(performance) - np.mean(performance)) + 0.1)</code></pre>
+</details>
+</dd>
+<dt id="rfs.generate_model"><code class="name flex">
+<span>def <span class="ident">generate_model</span></span>(<span>mu: numpy.ndarray) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Takes a vector of probabilities and returns a random model.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>mu</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Array of probabilities for each feature.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>index</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Randomly generated numbers corresponding to features ids based on probabilities.
+Array of selected features - their indices.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>Array of probabilities has all zero probabilities.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_model(mu: np.ndarray) -&gt; np.ndarray:
+    &#34;&#34;&#34;
+    Takes a vector of probabilities and returns a random model.
+
+    Parameters
+    ----------
+    mu : np.ndarray
+        Array of probabilities for each feature.
+
+    Returns
+    -------
+    index : np.ndarray
+        Randomly generated numbers corresponding to features ids based on probabilities.
+        Array of selected features - their indices.
+
+    Raises
+    ------
+    ValueError
+        Array of probabilities has all zero probabilities.
+    &#34;&#34;&#34;
+    if np.count_nonzero(mu) == 0:
+        raise ValueError(&#34;mu cannot be all zeros&#34;)
+
+    index= [0]
+    while len(index) &lt;= 1:
+        index = np.flatnonzero(np.random.binomial(1,mu))
+    return index</code></pre>
+</details>
+</dd>
+<dt id="rfs.perf_check"><code class="name flex">
+<span>def <span class="ident">perf_check</span></span>(<span>iter: int, avg_perf: numpy.ndarray, tol: float) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if performance has converged based on tolerance threshold.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>iter</code></strong> :&ensp;<code>int</code></dt>
+<dd>Current iteration.</dd>
+<dt><strong><code>avg_perf</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Average performance vector.</dd>
+<dt><strong><code>tol</code></strong> :&ensp;<code>float</code></dt>
+<dd>Tolerance condition.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True if performance converged
+(difference between average performance of two consecutive iterations is less than or equal to tol), else False.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def perf_check(iter: int, avg_perf: np.ndarray, tol: float) -&gt; bool:
+    &#34;&#34;&#34;
+    Checks if performance has converged based on tolerance threshold.
+
+    Parameters
+    ----------
+    iter : int
+        Current iteration.
+    avg_perf : np.ndarray
+        Average performance vector.
+    tol : float
+        Tolerance condition.
+
+    Returns
+    -------
+    bool
+        True if performance converged
+        (difference between average performance of two consecutive iterations is less than or equal to tol), else False.
+    &#34;&#34;&#34;
+    return iter &gt; 2 and np.abs(avg_perf[iter] - avg_perf[iter-1]) &lt;= tol</code></pre>
+</details>
+</dd>
+<dt id="rfs.prune_model"><code class="name flex">
+<span>def <span class="ident">prune_model</span></span>(<span>model: object, feature_ids: list, alpha: float) ‑> list</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Tests whether features are significant at selected significance level. Returns index of significant features.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>model</code></strong> :&ensp;<code>object</code></dt>
+<dd>Logistic regression model object. See statsmodels.api.Logit.</dd>
+<dt><strong><code>feature_ids</code></strong> :&ensp;<code>list</code></dt>
+<dd>Feature ids included in the model.</dd>
+<dt><strong><code>alpha</code></strong> :&ensp;<code>float</code></dt>
+<dd>(0,1) significance level.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>List of features above the significance level.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def prune_model(
+        model: object,
+        feature_ids: list,
+        alpha: float
+    ) -&gt; list:
+    &#34;&#34;&#34;
+    Tests whether features are significant at selected significance level. Returns index of significant features.
+
+    Parameters
+    ----------
+    model : object
+        Logistic regression model object. See statsmodels.api.Logit.
+    feature_ids : list
+        Feature ids included in the model.
+    alpha : float
+        (0,1) significance level.
+
+    Returns
+    -------
+    list
+        List of features above the significance level.
+    &#34;&#34;&#34;
+    return list(set(feature_ids[np.where(model.pvalues&lt;=alpha)]))</code></pre>
+</details>
+</dd>
+<dt id="rfs.select_model"><code class="name flex">
+<span>def <span class="ident">select_model</span></span>(<span>mu: numpy.ndarray, rip_cutoff: float) ‑> list</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Selects final model based on features that are above the regressor inclusion probability (rip) threshold.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>mu</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Current feature probability vector.</dd>
+<dt><strong><code>rip_cutoff</code></strong> :&ensp;<code>float</code></dt>
+<dd>Regressor inclusion probability threshold.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>List of features that are above the rip threshold.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def select_model(mu: np.ndarray, rip_cutoff: float) -&gt; list:
+    &#34;&#34;&#34;
+    Selects final model based on features that are above the regressor inclusion probability (rip) threshold.
+
+    Parameters
+    ----------
+    mu : np.ndarray
+        Current feature probability vector.
+    rip_cutoff : float
+        Regressor inclusion probability threshold.
+
+    Returns
+    -------
+    list
+        List of features that are above the rip threshold.
+    &#34;&#34;&#34;
+    return list((mu &gt;= rip_cutoff).nonzero()[0])</code></pre>
+</details>
+</dd>
+<dt id="rfs.tol_check"><code class="name flex">
+<span>def <span class="ident">tol_check</span></span>(<span>mu_update: numpy.ndarray, mu: numpy.ndarray, tol: float)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if maximum difference between mu vectors is below tolerance threshold.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>mu_update</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Mu at the iteration t+1.</dd>
+<dt><strong><code>mu</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Mu at the iteration t.</dd>
+<dt><strong><code>tol</code></strong> :&ensp;<code>float</code></dt>
+<dd>Tolerance condition.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True max difference below tolerance, else False.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tol_check(mu_update: np.ndarray, mu: np.ndarray, tol: float):
+    &#34;&#34;&#34;
+    Checks if maximum difference between mu vectors is below tolerance threshold.
+
+    Parameters
+    ----------
+    mu_update : np.ndarray
+        Mu at the iteration t+1.
+    mu : np.ndarray
+        Mu at the iteration t.
+    tol : float
+        Tolerance condition.
+
+    Returns
+    -------
+    bool
+        True max difference below tolerance, else False.
+    &#34;&#34;&#34;
+    return np.abs(mu_update - mu).max() &lt; tol</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="rfs.RFS"><code class="flex name class">
+<span>class <span class="ident">RFS</span></span>
+<span>(</span><span>n_models: int = 100, n_iters: int = 300, tuning: float = 10, tol: float = 0.002, alpha: float = 0.99, rip_cutoff: float = 1, metric: str = 'roc_auc', mu_init: dict = None, method='logit', estimator=SVC(kernel='linear'), verbose: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Transformer that performs Randomized Feature Selection (RFS).</p>
+<p>Read more in the official documentation of the Python package.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>n_models</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of models generated per iteration. Default=100.</dd>
+<dt><strong><code>n_iters</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of iterations. Default is 300.</dd>
+<dt><strong><code>tuning</code></strong> :&ensp;<code>float</code></dt>
+<dd>Learning rate that dictates the speed of regressor inclusion probability (rip) convergence.
+Smaller values -&gt; slower convergence. Default is 10.</dd>
+<dt><strong><code>tol</code></strong> :&ensp;<code>float</code></dt>
+<dd>Tolerance condition. Default is 0.002.</dd>
+<dt><strong><code>alpha</code></strong> :&ensp;<code>float</code></dt>
+<dd>Significance level for model pruning. Default is 0.99.</dd>
+<dt><strong><code>rip_cutoff</code></strong> :&ensp;<code>float</code></dt>
+<dd>Determines rip threshold for feature inclusion in final model. Default=1.</dd>
+<dt><strong><code>metric</code></strong> :&ensp;<code>str</code></dt>
+<dd>Optimization metric. Default='roc_auc'. Options: 'acc', 'roc_auc', 'weighted', 'avg_prec', 'f1', 'auprc'.</dd>
+<dt><strong><code>mu_init</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary containing user-assigned RIPs. If None, RIPs are initialised to 1/n_features.</dd>
+<dt><strong><code>method</code></strong> :&ensp;<code>str</code></dt>
+<dd>RFSC method. Options (str): 'dcor', 'logit', 'L1_logit'. Refer to the package documentation for more details.</dd>
+<dt><strong><code>estimator</code></strong> :&ensp;<code>estimator instance</code>, optional</dt>
+<dd>An unfitted estimator. Used for evaluation of the model with selected features.
+If method 'dcor', estimator is not used. Default is SVC(kernel='linear')</dd>
+<dt><strong><code>verbose</code></strong> :&ensp;<code>bool</code></dt>
+<dd>Provides extra information. Default is False.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class RFS(BaseEstimator, TransformerMixin):
+    &#34;&#34;&#34;
+    Transformer that performs Randomized Feature Selection (RFS).
+
+    Read more in the official documentation of the Python package.
+
+    Parameters
+    ----------
+    n_models : int
+        Number of models generated per iteration. Default=100.
+    n_iters : int
+        Number of iterations. Default is 300.
+    tuning : float
+        Learning rate that dictates the speed of regressor inclusion probability (rip) convergence.
+        Smaller values -&gt; slower convergence. Default is 10.
+    tol : float
+        Tolerance condition. Default is 0.002.
+    alpha : float
+        Significance level for model pruning. Default is 0.99.
+    rip_cutoff : float
+        Determines rip threshold for feature inclusion in final model. Default=1.
+    metric : str
+        Optimization metric. Default=&#39;roc_auc&#39;. Options: &#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;.
+    mu_init : dict
+        Dictionary containing user-assigned RIPs. If None, RIPs are initialised to 1/n_features.
+    method : str
+        RFSC method. Options (str): &#39;dcor&#39;, &#39;logit&#39;, &#39;L1_logit&#39;. Refer to the package documentation for more details.
+    estimator : estimator instance, optional
+        An unfitted estimator. Used for evaluation of the model with selected features.
+        If method &#39;dcor&#39;, estimator is not used. Default is SVC(kernel=&#39;linear&#39;)
+    verbose : bool
+        Provides extra information. Default is False.
+    &#34;&#34;&#34;
+
+    def __init__(self,
+            n_models: int=100,
+            n_iters: int=300,
+            tuning: float=10,
+            tol: float=0.002,
+            alpha: float=0.99,
+            rip_cutoff: float=1,
+            metric: str=&#39;roc_auc&#39;,
+            mu_init: dict=None,
+            method = &#34;logit&#34;,
+            estimator = SVM_classifier,
+            verbose: bool=False,
+        ):
+        self.n_models = n_models
+        self.n_iters = n_iters
+        self.tol = tol
+        self.alpha = alpha
+        self.tuning = tuning
+        self.rip_cutoff = rip_cutoff
+        self.metric = metric
+        self.mu_init = mu_init
+        self.method = method
+        self.estimator = estimator
+        self.verbose = verbose
+
+        if self.metric not in [&#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;]:
+            raise ValueError(f&#34;metric must be one of &#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;. Received: {self.metric} &#34;)
+        if self.method not in [&#39;logit&#39;, &#39;L1_logit&#39;, &#39;dcor&#39;]:
+            raise ValueError(f&#34;method must be one of &#39;logit&#39;, &#39;L1_logit&#39;, &#39;dcor&#39;. Received: {self.method}&#34;)
+        if not isinstance(self.n_models, int) and self.n_models &lt;= 0:
+            raise TypeError(f&#34;n_models parameter must be an integer greater than 0. Received: {type(self.n_models)}&#34;)
+        if not isinstance(self.n_iters, int) and self.n_iters &lt;= 0:
+            raise TypeError(f&#34;n_iters parameter must be an integer greater than 0. Received: {type(self.n_iters)}&#34;)
+        if self.tol &lt; 0:
+            raise ValueError(f&#34;tol parameter must be a positive number. Received: {self.tol}&#34;)
+        if not 0 &lt; self.alpha &lt; 1:
+            raise ValueError(f&#34;alpha parameter must be between 0 and 1. Received: {self.alpha}&#34;)
+        if self.tuning &lt; 0:
+            raise ValueError(f&#34;tuning parameter must be a positive number. Received: {self.tuning}&#34;)
+        if not 0 &lt; self.rip_cutoff &lt;= 1:
+            raise ValueError(f&#34;rip_cutoff parameter must be between 0 and 1. Received: {self.rip_cutoff}&#34;)
+        if not hasattr(self.estimator, &#39;fit&#39;):
+            raise ValueError(&#34;estimator must be an estimator instance with a fit method.&#34;)
+
+
+        print(
+            f&#34;{self.__class__.__name__} Initialised with with parameters: \n \
+            n_models = {n_models}, \n \
+            n_iters = {n_iters}, \n \
+            method = {method}, \n \
+            estimator = {estimator}, \n \
+            mu_init = {mu_init}, \n \
+            tuning = {tuning}, \n \
+            tol = {tol}, \n \
+            rip_cutoff = {rip_cutoff}, \n \
+            metric = {metric}, \n \
+            alpha = {alpha} \n ------------&#34;
+        ) if self.verbose else None
+
+    def __repr__(self) -&gt; str:
+        &#34;&#34;&#34;
+        Returns a string representation of the object. It includes the class name and the values of the instance variables.
+
+        Returns
+        -------
+        str
+            The string representation of the object.
+        &#34;&#34;&#34;
+        return (f&#34;{self.__class__.__name__}(n_models={self.n_models}, n_iters={self.n_iters}, \n \
+               method = {self.method}, estimator = {self.estimator}, tuning={self.tuning}, \n \
+               metric={self.metric}, alpha={self.alpha}), mu_init = {self.mu_init},  tol = {self.tol}, \n \
+               rip_cutoff = {self.rip_cutoff}&#34;)
+
+
+    def fit(self, X, y):
+        &#34;&#34;&#34;
+        Learn the features to select from X.
+
+        This is the main part of RFS algorithm. It extracts the model populations and evaluates
+        them on the validation set, and updates the feature inclusion probabilities accordingly.
+
+        Parameters
+        ----------
+        X : array-like of shape (n_samples, n_features)
+            Training vectors, where `n_samples` is the number of samples and
+            `n_features` is the number of predictors.
+
+        y : array-like of shape (n_samples,)
+            Target values.
+
+        Returns
+        -------
+        self : object
+            Returns the instance itself.
+        &#34;&#34;&#34;
+        perf_break = False
+        self.perf_check = 0
+        self.rnd_feats = {}
+        self.sig_feats = {}
+        avg_model_size = np.empty((0,))
+        avg_performance = np.empty((0,))
+
+        _, self.n_features  = np.shape(X)
+        if self.mu_init is None:
+          self.mu_init = (1/self.n_features) * np.ones((self.n_features))
+
+        mu = self.mu_init
+
+        X_train, X_val, Y_train, Y_val = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+
+
+        for t in range(self.n_iters):
+            mask, performance_vector, size_vector = self.generate_models(
+                                                            X_train=X_train,
+                                                            Y_train=Y_train,
+                                                            X_val=X_val,
+                                                            Y_val=Y_val,
+                                                            mu=mu
+                                                        )
+            mu_update = self.update_feature_probability(
+                            mask=mask,
+                            performance=performance_vector,
+                            mu=mu
+                        )
+            avg_model_size = np.append(avg_model_size, np.mean(size_vector.ravel()[np.flatnonzero(performance_vector)]))
+            avg_performance = np.append(avg_performance, np.mean(performance_vector.ravel()[np.flatnonzero(performance_vector)]))
+
+            if perf_check(t, avg_performance, self.tol):
+                self.perf_check += 1
+            else:
+                self.perf_check = 0
+
+            print(f&#34;iter: {t}, avg model size: {avg_model_size[t]:.2f}, avg perf is: {avg_performance[t]:.5f}, tol not reached, max diff is: {np.abs(mu_update - mu).max():.5f}, perf check: {self.perf_check}.&#34;) if self.verbose else None
+
+            if tol_check(mu_update, mu, self.tol): # stop if tolerance is reached.
+                print(f&#34;Tol reached. Number of features above rip_cutoff is {np.count_nonzero(mu_update&gt;=self.rip_cutoff)}&#34;)
+                break
+
+            elif self.perf_check &gt;= 2:
+                perf_break = True
+                break
+
+            mu = mu_update
+
+        self.iters = t
+        if perf_break is True:
+            sorted_items = sorted(self.sig_feats.items(), key=lambda item: item[1], reverse=True)
+            self.features_ = sorted_items[0][0]  # Get the key (features) with the highest performance
+
+        else:
+            self.features_ = select_model(mu=mu, rip_cutoff=self.rip_cutoff)
+            #case no feature meets the threshold
+            if len(self.features_) == 0:
+                self.features_ = list(np.nonzero(mu)[0])
+
+        #If none of the features are selected, then choose n_feats features with the highest mu_init values
+        if len(self.features_) == 0:
+            n_feats = self.n_features if self.n_features &lt; 10 else int(self.n_features*0.3)
+
+            indices_and_values = sorted(enumerate(self.mu_init), key=lambda x: x[1], reverse=True)
+            max_indices = [index for index, value in indices_and_values[:n_feats]]
+            self.features_ = max_indices
+
+        if self.method == &#34;dcor&#34;:
+            self.best_performance_ = distance_correlation(X_train[:, self.features_], Y_train)
+        if self.method in [&#34;logit&#34;, &#34;L1_logit&#34;]:
+            model = sm.Logit(Y_train, X_train[:, self.features_]).fit_regularized(method=&#39;l1&#39;, alpha=0.1)
+            prediction = model.predict(X_val[:, self.features_])
+
+            self.best_performance_ = model_score(
+                method=self.metric,
+                y_true=Y_val,
+                y_pred_label=prediction.round(),
+                y_pred_prob=prediction
+            )
+        return self
+
+    def update_feature_probability(
+        self,
+        mask: np.ndarray,
+        performance: np.ndarray,
+        mu: np.ndarray
+    ) -&gt; np.ndarray:
+        &#34;&#34;&#34;
+        Updates the feature probability vector mu based on the performance of the models generated.
+
+        Parameters
+        ----------
+        mask : np.ndarray
+            Matrix of shape (n_models, n_features) containing the mask of the models generated.
+        performance : np.ndarray
+            Performance evaluation for each model.
+        mu : np.ndarray
+            Current feature probability vector.
+
+        Returns
+        -------
+        mu_update : np.ndarray
+            Updated feature probability vector.
+        &#34;&#34;&#34;
+        features_incld = np.sum(mask, axis=0) #(n_features,)
+        features_excld = (np.ones(len(mu)) * self.n_models) - features_incld #(n_features,)
+        features_performance = performance @ mask #(n_features,)
+
+        ## evaluate importance of features
+        with np.errstate(divide=&#39;ignore&#39;, invalid=&#39;ignore&#39;):
+            E_J_incld = features_performance / features_incld
+            E_J_excld = (np.sum(performance) - features_performance) / features_excld
+
+        # for where features not chosen in any models
+        E_J_incld[np.isnan(E_J_incld)] = 0
+        E_J_excld[np.isnan(E_J_excld)] = 0
+        E_J_excld[np.isinf(E_J_excld)] = 0
+
+        gamma = gamma_update(performance=performance, tuning=self.tuning)
+        _mu = mu + gamma*(E_J_incld - E_J_excld)
+        return np.clip(_mu, 0, 1)
+
+    def generate_models(
+            self,
+            X_train: np.ndarray,
+            Y_train: np.ndarray,
+            X_val: np.ndarray,
+            Y_val: np.ndarray,
+            mu: np.ndarray
+        ):
+        &#34;&#34;&#34;
+        Generates random models and for each model evaluates the significance of each feature.
+        Statistically significant features are retained and resultant model&#39;s performance on validation partition is
+        evaluated and stored.
+
+        Parameters
+        ----------
+        X_train : np.ndarray
+            Training data.
+        Y_train : np.ndarray
+            Training labels.
+        X_val : np.ndarray
+            Validation data.
+        Y_val : np.ndarray
+            Validation labels.
+        mu : np.ndarray
+            Array of regressor inclusion probabilities of each feature.
+
+        Returns
+        -------
+        mask_mtx : np.ndarray
+            Matrix containing 1 in row i at column j if feature j was included in model i, else 0.
+        performance_vector : np.ndarray
+            Array containing performance of each model.
+        size_vector : np.ndarray
+            Array containing number of features in each model.
+        &#34;&#34;&#34;
+
+        if isinstance(X_train, pd.DataFrame):
+          X_train = X_train.to_numpy()
+        if isinstance(Y_train, pd.DataFrame):
+          Y_train = Y_train.to_numpy()
+        if isinstance(X_val, pd.DataFrame):
+          X_val = X_val.to_numpy()
+        if isinstance(Y_val, pd.DataFrame):
+          Y_val = Y_val.to_numpy()
+
+        mask = np.empty((0,))
+        mask_mtx = np.zeros((len(mu),)) # mask matrix
+        performance_vector = np.zeros((self.n_models,))# performance vector
+        size_vector = np.zeros((self.n_models,)) # average model size vector
+        #mu[0] = 1 # set bias term to 1
+
+        for i in range(self.n_models):
+            count = 0
+            mask_vector = np.zeros((len(mu),))
+            while True:
+                generated_features = generate_model(mu)
+                if len(generated_features) &lt; 1:
+                    old_mu_0 = mu[0]
+                    mu[0] = 1
+                    generated_features = generate_model(mu)
+                    mu[0] = old_mu_0
+
+                if tuple(generated_features) not in self.rnd_feats.keys(): # check if model has been generated before
+                    if self.method == &#34;logit&#34;:
+                      logreg_init = sm.Logit(
+                                        Y_train,
+                                        X_train[:, generated_features]
+                                    ).fit(disp=False, method=&#39;lbfgs&#39;)
+                      #Statistical Test for Regressor Significance
+                      #The rejection of redundant terms is a crucial step in the identification procedure.
+                      significant_features = prune_model(
+                                                model=logreg_init,
+                                                feature_ids=generated_features,
+                                                alpha=self.alpha
+                                            )
+
+                    elif self.method == &#34;L1_logit&#34;:
+                      lr = LogisticRegression(penalty=&#39;l1&#39;, solver=&#39;liblinear&#39;, max_iter=1000)
+                      lr.fit(X_train[:, generated_features], Y_train)
+                      significant_features = np.where(lr.coef_[0] != 0)[0]
+
+                    elif self.method == &#34;dcor&#34;:
+                      significant_features = generated_features
+
+                    self.rnd_feats[tuple(generated_features)] = significant_features
+
+                else: # if model has been generated before, use the stored significant features
+                    significant_features = self.rnd_feats[tuple(generated_features)]
+
+                if len(significant_features) &gt; 1:
+                    break
+
+                count += 1
+                if count &gt; 1000:
+                    self.alpha -= 0.05
+                    warnings.warn(&#34;The significance level alpha was reduced by 0.05&#34;)
+
+
+            size_vector[i] = len(significant_features)
+            mask_vector[significant_features] = 1
+            mask = np.concatenate((mask, mask_vector), axis=0)
+
+            if tuple(significant_features) not in self.sig_feats.keys(): # check if model has been evaluated before
+                if self.method in [&#34;L1_logit&#34;, &#34;logit&#34;]:
+                    model = self.estimator.fit(X_train[:, significant_features], Y_train)
+                    prediction = model.predict(X_val[:, significant_features])
+
+                    performance_vector[i] = model_score(
+                                              method=self.metric,
+                                              y_true=Y_val,
+                                              y_pred_label=prediction.round(),
+                                              y_pred_prob=prediction
+                                          )
+                elif self.method == &#34;dcor&#34;:
+                    performance_vector[i] = distance_correlation(X_train[:, significant_features], Y_train)
+
+                self.sig_feats[tuple(significant_features)] = performance_vector[i]
+
+            else: # if model has been evaluated before, used the stored performance
+                performance_vector[i] = self.sig_feats[tuple(significant_features)]
+
+        mask_mtx = np.reshape(mask, (len(performance_vector), len(mu)))
+        return mask_mtx, performance_vector, size_vector
+
+    def get_support(self, indices = False):
+        &#34;&#34;&#34;
+        Get the feature support mask or indices.
+
+        Parameters
+        ----------
+        indices : bool, optional
+            If True, returns the indices of the supported features.
+            If False (default), returns a boolean mask indicating supported features.
+
+        Returns
+        -------
+        numpy.ndarray
+            If indices is True, a numpy array containing the indices of the supported features.
+            If indices is False, a boolean mask indicating supported features.
+
+        Raises
+        ------
+        NotFittedError
+            If the estimator is not fitted.
+        &#34;&#34;&#34;
+        check_is_fitted(self)
+        mask = np.zeros(self.n_features, dtype=bool)
+        mask[list(self.features_)] = True
+        return self.features_ if indices else mask
+
+    def get_best_performance(self):
+        &#34;&#34;&#34;
+        Retrieve the best performance achieved.
+        This method returns the performance of the model with selected features.
+
+        Returns
+        -------
+        float
+            The best performance value if available, otherwise 0.
+        &#34;&#34;&#34;
+        return self.best_performance_ if self.best_performance_ is not None else 0
+
+
+    def transform(self, X):
+        &#34;&#34;&#34;
+        Reduce X to the selected features.
+
+        Parameters
+        ----------
+        X : array of shape [n_samples, n_features]
+            The input samples.
+
+        Returns
+        -------
+        array of shape [n_samples, n_selected_features]
+            The input samples with only the selected features.
+        &#34;&#34;&#34;
+        mask = self.get_support()
+        if not mask.any():
+            warnings.warn(
+                (
+                    &#34;No features were selected: either the data is&#34;
+                    &#34; too noisy or the selection test too strict.&#34;
+                ),
+                UserWarning,
+            )
+            if hasattr(X, &#34;iloc&#34;):
+                return X.iloc[:, :0]
+            return np.empty(0, dtype=X.dtype).reshape((X.shape[0], 0))
+        return _safe_indexing(X, mask, axis=1)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>sklearn.base.BaseEstimator</li>
+<li>sklearn.utils._estimator_html_repr._HTMLDocumentationLinkMixin</li>
+<li>sklearn.utils._metadata_requests._MetadataRequester</li>
+<li>sklearn.base.TransformerMixin</li>
+<li>sklearn.utils._set_output._SetOutputMixin</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="rfs.RFS.fit"><code class="name flex">
+<span>def <span class="ident">fit</span></span>(<span>self, X, y)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Learn the features to select from X.</p>
+<p>This is the main part of RFS algorithm. It extracts the model populations and evaluates
+them on the validation set, and updates the feature inclusion probabilities accordingly.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>X</code></strong> :&ensp;<code>array-like</code> of <code>shape (n_samples, n_features)</code></dt>
+<dd>Training vectors, where <code>n_samples</code> is the number of samples and
+<code>n_features</code> is the number of predictors.</dd>
+<dt><strong><code>y</code></strong> :&ensp;<code>array-like</code> of <code>shape (n_samples,)</code></dt>
+<dd>Target values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>Returns the instance itself.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fit(self, X, y):
+    &#34;&#34;&#34;
+    Learn the features to select from X.
+
+    This is the main part of RFS algorithm. It extracts the model populations and evaluates
+    them on the validation set, and updates the feature inclusion probabilities accordingly.
+
+    Parameters
+    ----------
+    X : array-like of shape (n_samples, n_features)
+        Training vectors, where `n_samples` is the number of samples and
+        `n_features` is the number of predictors.
+
+    y : array-like of shape (n_samples,)
+        Target values.
+
+    Returns
+    -------
+    self : object
+        Returns the instance itself.
+    &#34;&#34;&#34;
+    perf_break = False
+    self.perf_check = 0
+    self.rnd_feats = {}
+    self.sig_feats = {}
+    avg_model_size = np.empty((0,))
+    avg_performance = np.empty((0,))
+
+    _, self.n_features  = np.shape(X)
+    if self.mu_init is None:
+      self.mu_init = (1/self.n_features) * np.ones((self.n_features))
+
+    mu = self.mu_init
+
+    X_train, X_val, Y_train, Y_val = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+
+
+    for t in range(self.n_iters):
+        mask, performance_vector, size_vector = self.generate_models(
+                                                        X_train=X_train,
+                                                        Y_train=Y_train,
+                                                        X_val=X_val,
+                                                        Y_val=Y_val,
+                                                        mu=mu
+                                                    )
+        mu_update = self.update_feature_probability(
+                        mask=mask,
+                        performance=performance_vector,
+                        mu=mu
+                    )
+        avg_model_size = np.append(avg_model_size, np.mean(size_vector.ravel()[np.flatnonzero(performance_vector)]))
+        avg_performance = np.append(avg_performance, np.mean(performance_vector.ravel()[np.flatnonzero(performance_vector)]))
+
+        if perf_check(t, avg_performance, self.tol):
+            self.perf_check += 1
+        else:
+            self.perf_check = 0
+
+        print(f&#34;iter: {t}, avg model size: {avg_model_size[t]:.2f}, avg perf is: {avg_performance[t]:.5f}, tol not reached, max diff is: {np.abs(mu_update - mu).max():.5f}, perf check: {self.perf_check}.&#34;) if self.verbose else None
+
+        if tol_check(mu_update, mu, self.tol): # stop if tolerance is reached.
+            print(f&#34;Tol reached. Number of features above rip_cutoff is {np.count_nonzero(mu_update&gt;=self.rip_cutoff)}&#34;)
+            break
+
+        elif self.perf_check &gt;= 2:
+            perf_break = True
+            break
+
+        mu = mu_update
+
+    self.iters = t
+    if perf_break is True:
+        sorted_items = sorted(self.sig_feats.items(), key=lambda item: item[1], reverse=True)
+        self.features_ = sorted_items[0][0]  # Get the key (features) with the highest performance
+
+    else:
+        self.features_ = select_model(mu=mu, rip_cutoff=self.rip_cutoff)
+        #case no feature meets the threshold
+        if len(self.features_) == 0:
+            self.features_ = list(np.nonzero(mu)[0])
+
+    #If none of the features are selected, then choose n_feats features with the highest mu_init values
+    if len(self.features_) == 0:
+        n_feats = self.n_features if self.n_features &lt; 10 else int(self.n_features*0.3)
+
+        indices_and_values = sorted(enumerate(self.mu_init), key=lambda x: x[1], reverse=True)
+        max_indices = [index for index, value in indices_and_values[:n_feats]]
+        self.features_ = max_indices
+
+    if self.method == &#34;dcor&#34;:
+        self.best_performance_ = distance_correlation(X_train[:, self.features_], Y_train)
+    if self.method in [&#34;logit&#34;, &#34;L1_logit&#34;]:
+        model = sm.Logit(Y_train, X_train[:, self.features_]).fit_regularized(method=&#39;l1&#39;, alpha=0.1)
+        prediction = model.predict(X_val[:, self.features_])
+
+        self.best_performance_ = model_score(
+            method=self.metric,
+            y_true=Y_val,
+            y_pred_label=prediction.round(),
+            y_pred_prob=prediction
+        )
+    return self</code></pre>
+</details>
+</dd>
+<dt id="rfs.RFS.generate_models"><code class="name flex">
+<span>def <span class="ident">generate_models</span></span>(<span>self, X_train: numpy.ndarray, Y_train: numpy.ndarray, X_val: numpy.ndarray, Y_val: numpy.ndarray, mu: numpy.ndarray)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Generates random models and for each model evaluates the significance of each feature.
+Statistically significant features are retained and resultant model's performance on validation partition is
+evaluated and stored.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>X_train</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Training data.</dd>
+<dt><strong><code>Y_train</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Training labels.</dd>
+<dt><strong><code>X_val</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Validation data.</dd>
+<dt><strong><code>Y_val</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Validation labels.</dd>
+<dt><strong><code>mu</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Array of regressor inclusion probabilities of each feature.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>mask_mtx</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Matrix containing 1 in row i at column j if feature j was included in model i, else 0.</dd>
+<dt><strong><code>performance_vector</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Array containing performance of each model.</dd>
+<dt><strong><code>size_vector</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Array containing number of features in each model.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_models(
+        self,
+        X_train: np.ndarray,
+        Y_train: np.ndarray,
+        X_val: np.ndarray,
+        Y_val: np.ndarray,
+        mu: np.ndarray
+    ):
+    &#34;&#34;&#34;
+    Generates random models and for each model evaluates the significance of each feature.
+    Statistically significant features are retained and resultant model&#39;s performance on validation partition is
+    evaluated and stored.
+
+    Parameters
+    ----------
+    X_train : np.ndarray
+        Training data.
+    Y_train : np.ndarray
+        Training labels.
+    X_val : np.ndarray
+        Validation data.
+    Y_val : np.ndarray
+        Validation labels.
+    mu : np.ndarray
+        Array of regressor inclusion probabilities of each feature.
+
+    Returns
+    -------
+    mask_mtx : np.ndarray
+        Matrix containing 1 in row i at column j if feature j was included in model i, else 0.
+    performance_vector : np.ndarray
+        Array containing performance of each model.
+    size_vector : np.ndarray
+        Array containing number of features in each model.
+    &#34;&#34;&#34;
+
+    if isinstance(X_train, pd.DataFrame):
+      X_train = X_train.to_numpy()
+    if isinstance(Y_train, pd.DataFrame):
+      Y_train = Y_train.to_numpy()
+    if isinstance(X_val, pd.DataFrame):
+      X_val = X_val.to_numpy()
+    if isinstance(Y_val, pd.DataFrame):
+      Y_val = Y_val.to_numpy()
+
+    mask = np.empty((0,))
+    mask_mtx = np.zeros((len(mu),)) # mask matrix
+    performance_vector = np.zeros((self.n_models,))# performance vector
+    size_vector = np.zeros((self.n_models,)) # average model size vector
+    #mu[0] = 1 # set bias term to 1
+
+    for i in range(self.n_models):
+        count = 0
+        mask_vector = np.zeros((len(mu),))
+        while True:
+            generated_features = generate_model(mu)
+            if len(generated_features) &lt; 1:
+                old_mu_0 = mu[0]
+                mu[0] = 1
+                generated_features = generate_model(mu)
+                mu[0] = old_mu_0
+
+            if tuple(generated_features) not in self.rnd_feats.keys(): # check if model has been generated before
+                if self.method == &#34;logit&#34;:
+                  logreg_init = sm.Logit(
+                                    Y_train,
+                                    X_train[:, generated_features]
+                                ).fit(disp=False, method=&#39;lbfgs&#39;)
+                  #Statistical Test for Regressor Significance
+                  #The rejection of redundant terms is a crucial step in the identification procedure.
+                  significant_features = prune_model(
+                                            model=logreg_init,
+                                            feature_ids=generated_features,
+                                            alpha=self.alpha
+                                        )
+
+                elif self.method == &#34;L1_logit&#34;:
+                  lr = LogisticRegression(penalty=&#39;l1&#39;, solver=&#39;liblinear&#39;, max_iter=1000)
+                  lr.fit(X_train[:, generated_features], Y_train)
+                  significant_features = np.where(lr.coef_[0] != 0)[0]
+
+                elif self.method == &#34;dcor&#34;:
+                  significant_features = generated_features
+
+                self.rnd_feats[tuple(generated_features)] = significant_features
+
+            else: # if model has been generated before, use the stored significant features
+                significant_features = self.rnd_feats[tuple(generated_features)]
+
+            if len(significant_features) &gt; 1:
+                break
+
+            count += 1
+            if count &gt; 1000:
+                self.alpha -= 0.05
+                warnings.warn(&#34;The significance level alpha was reduced by 0.05&#34;)
+
+
+        size_vector[i] = len(significant_features)
+        mask_vector[significant_features] = 1
+        mask = np.concatenate((mask, mask_vector), axis=0)
+
+        if tuple(significant_features) not in self.sig_feats.keys(): # check if model has been evaluated before
+            if self.method in [&#34;L1_logit&#34;, &#34;logit&#34;]:
+                model = self.estimator.fit(X_train[:, significant_features], Y_train)
+                prediction = model.predict(X_val[:, significant_features])
+
+                performance_vector[i] = model_score(
+                                          method=self.metric,
+                                          y_true=Y_val,
+                                          y_pred_label=prediction.round(),
+                                          y_pred_prob=prediction
+                                      )
+            elif self.method == &#34;dcor&#34;:
+                performance_vector[i] = distance_correlation(X_train[:, significant_features], Y_train)
+
+            self.sig_feats[tuple(significant_features)] = performance_vector[i]
+
+        else: # if model has been evaluated before, used the stored performance
+            performance_vector[i] = self.sig_feats[tuple(significant_features)]
+
+    mask_mtx = np.reshape(mask, (len(performance_vector), len(mu)))
+    return mask_mtx, performance_vector, size_vector</code></pre>
+</details>
+</dd>
+<dt id="rfs.RFS.get_best_performance"><code class="name flex">
+<span>def <span class="ident">get_best_performance</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieve the best performance achieved.
+This method returns the performance of the model with selected features.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>float</code></dt>
+<dd>The best performance value if available, otherwise 0.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_best_performance(self):
+    &#34;&#34;&#34;
+    Retrieve the best performance achieved.
+    This method returns the performance of the model with selected features.
+
+    Returns
+    -------
+    float
+        The best performance value if available, otherwise 0.
+    &#34;&#34;&#34;
+    return self.best_performance_ if self.best_performance_ is not None else 0</code></pre>
+</details>
+</dd>
+<dt id="rfs.RFS.get_support"><code class="name flex">
+<span>def <span class="ident">get_support</span></span>(<span>self, indices=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the feature support mask or indices.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>indices</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, returns the indices of the supported features.
+If False (default), returns a boolean mask indicating supported features.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>numpy.ndarray</code></dt>
+<dd>If indices is True, a numpy array containing the indices of the supported features.
+If indices is False, a boolean mask indicating supported features.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>NotFittedError</code></dt>
+<dd>If the estimator is not fitted.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_support(self, indices = False):
+    &#34;&#34;&#34;
+    Get the feature support mask or indices.
+
+    Parameters
+    ----------
+    indices : bool, optional
+        If True, returns the indices of the supported features.
+        If False (default), returns a boolean mask indicating supported features.
+
+    Returns
+    -------
+    numpy.ndarray
+        If indices is True, a numpy array containing the indices of the supported features.
+        If indices is False, a boolean mask indicating supported features.
+
+    Raises
+    ------
+    NotFittedError
+        If the estimator is not fitted.
+    &#34;&#34;&#34;
+    check_is_fitted(self)
+    mask = np.zeros(self.n_features, dtype=bool)
+    mask[list(self.features_)] = True
+    return self.features_ if indices else mask</code></pre>
+</details>
+</dd>
+<dt id="rfs.RFS.transform"><code class="name flex">
+<span>def <span class="ident">transform</span></span>(<span>self, X)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Reduce X to the selected features.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>X</code></strong> :&ensp;<code>array</code> of <code>shape [n_samples, n_features]</code></dt>
+<dd>The input samples.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>array</code> of <code>shape [n_samples, n_selected_features]</code></dt>
+<dd>The input samples with only the selected features.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def transform(self, X):
+    &#34;&#34;&#34;
+    Reduce X to the selected features.
+
+    Parameters
+    ----------
+    X : array of shape [n_samples, n_features]
+        The input samples.
+
+    Returns
+    -------
+    array of shape [n_samples, n_selected_features]
+        The input samples with only the selected features.
+    &#34;&#34;&#34;
+    mask = self.get_support()
+    if not mask.any():
+        warnings.warn(
+            (
+                &#34;No features were selected: either the data is&#34;
+                &#34; too noisy or the selection test too strict.&#34;
+            ),
+            UserWarning,
+        )
+        if hasattr(X, &#34;iloc&#34;):
+            return X.iloc[:, :0]
+        return np.empty(0, dtype=X.dtype).reshape((X.shape[0], 0))
+    return _safe_indexing(X, mask, axis=1)</code></pre>
+</details>
+</dd>
+<dt id="rfs.RFS.update_feature_probability"><code class="name flex">
+<span>def <span class="ident">update_feature_probability</span></span>(<span>self, mask: numpy.ndarray, performance: numpy.ndarray, mu: numpy.ndarray) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Updates the feature probability vector mu based on the performance of the models generated.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>mask</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Matrix of shape (n_models, n_features) containing the mask of the models generated.</dd>
+<dt><strong><code>performance</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Performance evaluation for each model.</dd>
+<dt><strong><code>mu</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Current feature probability vector.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>mu_update</code></strong> :&ensp;<code>np.ndarray</code></dt>
+<dd>Updated feature probability vector.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_feature_probability(
+    self,
+    mask: np.ndarray,
+    performance: np.ndarray,
+    mu: np.ndarray
+) -&gt; np.ndarray:
+    &#34;&#34;&#34;
+    Updates the feature probability vector mu based on the performance of the models generated.
+
+    Parameters
+    ----------
+    mask : np.ndarray
+        Matrix of shape (n_models, n_features) containing the mask of the models generated.
+    performance : np.ndarray
+        Performance evaluation for each model.
+    mu : np.ndarray
+        Current feature probability vector.
+
+    Returns
+    -------
+    mu_update : np.ndarray
+        Updated feature probability vector.
+    &#34;&#34;&#34;
+    features_incld = np.sum(mask, axis=0) #(n_features,)
+    features_excld = (np.ones(len(mu)) * self.n_models) - features_incld #(n_features,)
+    features_performance = performance @ mask #(n_features,)
+
+    ## evaluate importance of features
+    with np.errstate(divide=&#39;ignore&#39;, invalid=&#39;ignore&#39;):
+        E_J_incld = features_performance / features_incld
+        E_J_excld = (np.sum(performance) - features_performance) / features_excld
+
+    # for where features not chosen in any models
+    E_J_incld[np.isnan(E_J_incld)] = 0
+    E_J_excld[np.isnan(E_J_excld)] = 0
+    E_J_excld[np.isinf(E_J_excld)] = 0
+
+    gamma = gamma_update(performance=performance, tuning=self.tuning)
+    _mu = mu + gamma*(E_J_incld - E_J_excld)
+    return np.clip(_mu, 0, 1)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="two-column">
+<li><code><a title="rfs.gamma_update" href="#rfs.gamma_update">gamma_update</a></code></li>
+<li><code><a title="rfs.generate_model" href="#rfs.generate_model">generate_model</a></code></li>
+<li><code><a title="rfs.perf_check" href="#rfs.perf_check">perf_check</a></code></li>
+<li><code><a title="rfs.prune_model" href="#rfs.prune_model">prune_model</a></code></li>
+<li><code><a title="rfs.select_model" href="#rfs.select_model">select_model</a></code></li>
+<li><code><a title="rfs.tol_check" href="#rfs.tol_check">tol_check</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="rfs.RFS" href="#rfs.RFS">RFS</a></code></h4>
+<ul class="">
+<li><code><a title="rfs.RFS.fit" href="#rfs.RFS.fit">fit</a></code></li>
+<li><code><a title="rfs.RFS.generate_models" href="#rfs.RFS.generate_models">generate_models</a></code></li>
+<li><code><a title="rfs.RFS.get_best_performance" href="#rfs.RFS.get_best_performance">get_best_performance</a></code></li>
+<li><code><a title="rfs.RFS.get_support" href="#rfs.RFS.get_support">get_support</a></code></li>
+<li><code><a title="rfs.RFS.transform" href="#rfs.RFS.transform">transform</a></code></li>
+<li><code><a title="rfs.RFS.update_feature_probability" href="#rfs.RFS.update_feature_probability">update_feature_probability</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,2243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>dfs API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>dfs</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import functools
+import itertools
+import multiprocessing as mp
+import time
+import warnings
+from typing import Union, Tuple
+
+import numpy as np
+import pandas as pd
+
+import statsmodels.discrete.discrete_model as sm
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.utils import _safe_indexing
+from sklearn.utils.validation import check_is_fitted
+
+from utils import create_balanced_distributions
+from utils import evaluate_interim_model
+from utils import remove_feature_duplication
+
+
+class DFS(BaseEstimator, TransformerMixin):
+    &#34;&#34;&#34;
+    Transformer that performs Distributed Feature Selection (DFS).
+
+    Read more in the official documentation of the Python package.
+
+    Parameters
+    ----------
+    local_fs_method : object, optional
+            The machine learning model used for feature selection for each data partition. Default is a Support Vector
+            Classifier (SVC) with a linear kernel and a random seed of 42.
+    n_vbins : int, optional
+            Number of vertical partitions to create for the data. Defaults to 1.
+    n_hbins : int, optional
+            Number of horizontal partitions to create for the data. If output = &#39;ensemble&#39;, each hbin will converge to
+            its own best model. Defaults to 1.
+    n_runs : int, optional
+            Number of feature-sharing iterations to perform. Larger numbers may yield better results, but also take longer.
+            Defaults to 1.
+    redistribute_features : bool, optional
+            If True, the base features included in each bin will be shuffled at each feature-sharing iteration.
+            Does not affect feature sharing. Defaults to False.
+    feature_sharing : str, optional
+            The method used to share features. Defaults to &#39;all&#39;. Options (str): &#39;all&#39;, &#39;latest&#39;, &#39;top_k&#39;.
+            If feature_sharing = &#39;all&#39;, the entire history of best features from all sub-processes will be shared.
+            If feature_sharing = &#39;latest&#39;, features from all sub-processes at the current iteration will be shared.
+            If feature_sharing = &#39;top_k&#39;, the best k features will be shared.
+    k : int, optional
+            Number of best features to share. Only used if feature_sharing = &#39;top_k&#39;. Defaults to 0.
+    output : str, optional
+            Output type desired. Options (str): &#39;single&#39;, &#39;ensemble&#39;. If output = &#39;single&#39;, the best model from all
+            sub-processes will be returned. If output = &#39;ensemble&#39;, the best model from each horizontal partition will be returned.
+            If output = &#39;ensemble&#39;, no features between different horizontal partitions will be created. Defaults to &#39;single&#39;.
+    metric : str, optional
+            Evaluation metric used in the optimization process.
+            Options (str) : [&#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;]. Defaults to &#39;roc_auc&#39;.
+            For more information on the metrics, see the documentation for the sklearn.metrics module.
+    verbose : bool, optional
+            If True, prints extra information. Defaults to False.
+    max_processes : int, optional
+            Enforces maximum number of processes that can be generated. If None, will use all available cores.
+            Defaults to None.
+    estimator : estimator instance, optional
+            An unfitted estimator. Machine learning model used for evaluation of the results for all sub-processes.
+    &#34;&#34;&#34;
+
+    def __init__(
+            self,
+            local_fs_method=SelectKBest(score_func=chi2, k=3),
+            n_vbins: int = 1,
+            n_hbins: int = 1,
+            n_runs: int = 1,
+            redistribute_features: bool = False,
+            feature_sharing: str = &#39;all&#39;,
+            k: int = 0,
+            output: str = &#39;single&#39;,
+            metric: str = &#39;roc_auc&#39;,
+            verbose: bool = False,
+            max_processes: int = None,
+            estimator=None
+    ):
+        # validation
+        if local_fs_method is not None and not hasattr(local_fs_method, &#39;fit&#39;):
+            raise ValueError(&#34;local_fs_method must be an instance with a fit method.&#34;)
+
+        if not isinstance(n_vbins, int) or n_vbins &lt; 1:
+            raise ValueError(&#34;n_vbins must be a positive integer.&#34;)
+
+        if not isinstance(n_hbins, int) or n_hbins &lt; 1:
+            raise ValueError(&#34;n_hbins must be a positive integer.&#34;)
+
+        if not isinstance(n_runs, int) or n_runs &lt; 1:
+            raise ValueError(&#34;n_runs must be a positive integer.&#34;)
+
+        if not isinstance(k, int) or k &lt; 0:
+            raise ValueError(&#34;k must be a non-negative integer.&#34;)
+
+        if max_processes is not None and (not isinstance(max_processes, int) or max_processes &lt; 1):
+            raise ValueError(&#34;max_processes must be None or a positive integer.&#34;)
+
+        if not isinstance(redistribute_features, bool):
+            raise ValueError(&#34;redistribute_features must be a boolean value.&#34;)
+
+        if feature_sharing not in [&#39;all&#39;, &#39;latest&#39;, &#39;top_k&#39;]:
+            raise ValueError(&#34;feature_sharing must be one of &#39;all&#39;, &#39;latest&#39;, or &#39;top_k&#39;.&#34;)
+
+        if not isinstance(output, str) or output not in [&#39;single&#39;, &#39;ensemble&#39;]:
+            raise ValueError(&#34;output must be either &#39;single&#39; or &#39;ensemble&#39;.&#34;)
+
+        if metric not in [&#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;]:
+            raise ValueError(&#34;metric must be one of &#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, or &#39;auprc&#39;.&#34;)
+
+        if not isinstance(verbose, bool):
+            raise ValueError(&#34;verbose must be a boolean value.&#34;)
+
+        if estimator is not None and not hasattr(estimator, &#39;fit&#39;):
+            raise ValueError(&#34;estimator must be an estimator instance with a fit method.&#34;)
+
+        self.estimator = estimator
+        self.metric = metric
+        self.n_vbins = n_vbins
+        self.n_hbins = n_hbins
+        self.n_runs = n_runs
+        self.redistribute_features = redistribute_features
+        self.feature_sharing = feature_sharing
+        self.k = k
+        self.output = output
+        self.verbose = verbose
+        self.loaded_data = 0
+        self.max_processes = max(max_processes, mp.cpu_count()) if max_processes is not None else mp.cpu_count()
+        self.local_fs_method = local_fs_method
+
+        print(f&#34;{self.__class__.__name__} Initialised with parameters: \n \
+        local_fs_method = {local_fs_method}, \n \
+        n_vbins = {n_vbins}, \n \
+        n_hbins = {n_hbins}, \n \
+        n_runs = {n_runs}, \n \
+        redistribute = {redistribute_features}, \n \
+        sharing = {feature_sharing}, \n \
+        k = {k}, \n \
+        output = {output}, \n \
+        metric = {metric}, \n \
+        estimator = {estimator}, \n \
+        max_processes is {self.max_processes} \n ------------&#34;) if self.verbose else None
+
+    def __repr__(self) -&gt; str:
+        &#34;&#34;&#34;
+        Returns a string representation of the object. It includes the class name and the values of the instance variables.
+
+        Returns
+        -------
+        str
+            The string representation of the object.
+
+        &#34;&#34;&#34;
+        return f&#34;{self.__class__.__name__}(local_fs_method = {self.local_fs_method}, n_vbins={self.n_vbins}, \
+                 n_hbins={self.n_hbins}, n_runs={self.n_runs}, redistribute_features={self.redistribute_features}, \
+                 feature_sharing={self.feature_sharing}, k={self.k}, output={self.output}, \
+                 metric={self.metric}, verbose={self.verbose}, max_processes={self.max_processes}, estimator={self.estimator})&#34;
+
+    def fit(self, X_train: Union[np.ndarray, pd.DataFrame], Y_train: Union[np.ndarray, pd.DataFrame]):
+        &#34;&#34;&#34;
+        Learn the features to select from X_train.
+
+        Parameters
+        ----------
+        X_train : array-like of shape (n_samples, n_features)
+            Training vectors, where `n_samples` is the number of samples and
+            `n_features` is the number of features/predictors.
+
+        Y_train : array-like of shape (n_samples,)
+            Target values.
+
+        Returns
+        -------
+        self : object
+            Returns the instance itself.
+        &#34;&#34;&#34;
+
+        if isinstance(X_train, pd.DataFrame):
+            X_train = X_train.to_numpy()
+
+        if isinstance(Y_train, (pd.DataFrame, pd.Series)):
+            Y_train = Y_train.to_numpy()
+
+        self.n_samples, self.n_features = X_train.shape
+
+        # create vertical and horizontal partitions
+        distributed_features, distributed_samples = create_balanced_distributions(
+            labels=Y_train,
+            n_feats=self.n_features,
+            n_vbins=self.n_vbins,
+            n_hbins=self.n_hbins
+        )
+
+        # Initialization
+        self.J_star = {i: [] for i in range(self.n_hbins)}
+        self.J_best = {i: [0, 0] for i in range(self.n_hbins)}
+        self.results_full = {}
+        self.M_history = {}
+        self.n_iter_conv = self.n_runs
+        M = {i: 0 for i in range(self.n_hbins)}  # selected features
+        non_converged_hbins = np.arange(self.n_hbins).tolist()
+
+        if self.verbose:
+            print(
+                f&#34;Number of Samples: {self.n_samples}. Horizontal Disitribution SHAPE: {np.shape(distributed_samples)}&#34;)
+            print(
+                f&#34;Number of Features: {self.n_features}. Vertical Distribution SHAPE: {np.shape(distributed_features)}&#34;)
+
+        if self.n_hbins == 1 and self.n_vbins == 1:
+            if self.output == &#39;ensemble&#39;:
+                print(
+                    &#34;WARNING: Ensemble output is not possible with n_hbins = 1 and n_vbins = 1. Setting output = &#39;single&#39;&#34;)
+            self.output = &#39;single&#39;
+
+            self.local_fs_method.fit(X_train, Y_train)
+            self.local_fs_method.get_support()
+            self.J_best = {0: [self.local_fs_method.get_support()]}
+            self.build_final_model(J_best=self.J_best)
+            return self.J_best
+
+        self.time_per_iteration = []
+        for r in range(self.n_runs):
+            start_time = time.time()
+            iter_results = {}  # initialise dictionary for storing results
+
+            if self.redistribute_features:
+                distributed_features, _ = create_balanced_distributions(
+                    labels=Y_train,
+                    n_feats=self.n_features,
+                    n_vbins=self.n_vbins,
+                    n_hbins=self.n_hbins
+                )
+            result_obj = []
+
+            def store_results(obj, indices, features_passed):  # callback for mp
+                performance = obj.get_best_performance() if hasattr(obj, &#39;get_best_performance&#39;) else None
+                result = self._Result(list(obj.get_support(indices=True)), indices, features_passed,
+                                      evaluation=performance)
+                result_obj.append(result)
+
+            pool = mp.Pool(processes=min((self.n_vbins * len(non_converged_hbins)), self.max_processes),
+                           maxtasksperchild=1)
+            for i, j in itertools.product(range(self.n_vbins), non_converged_hbins):
+                feature_partition = list(distributed_features[:, i])
+                feature_share = self.join_features(
+                    features=feature_partition,
+                    M=M[j]
+                )
+                features_passed = [int(i) for i in feature_share]
+                sample_indices = list(distributed_samples[:, j])
+
+                pool.apply_async(
+                    self.local_fs_method.fit,
+                    args=(X_train[:, features_passed][sample_indices, :], Y_train[sample_indices]),
+                    callback=functools.partial(store_results, indices=(r, i, j), features_passed=features_passed)
+                )
+
+            pool.close()
+            pool.join()
+
+            if len(result_obj) != (
+                    self.n_vbins * len(non_converged_hbins)):
+                print(
+                    f&#34;result_obj length is {len(result_obj)}. Should be {(self.n_vbins * len(non_converged_hbins))}&#34;)
+
+            for result in result_obj:
+                # predict on all sub-processes
+                global_features = [result.features_passed[i] for i in result.features]
+                if result.evaluation is None:
+                    result.model, result.evaluation = evaluate_interim_model(
+                        model_features=global_features,
+                        X=X_train,
+                        y=Y_train,
+                        metric=self.metric,
+                        model=self.estimator
+                    )
+
+                iter_results[result.drfsc_index] = result
+
+            # check if every result is here
+            for i, j in itertools.product(range(self.n_vbins), non_converged_hbins):
+                if (r, i, j) not in [x.drfsc_index for x in result_obj]:
+                    print(f&#34;missing result {(r, i, j)}&#34;)
+                    iter_results[(r, i, j)] = [[0], 0, self.output, [0]]
+
+            # update full results dict
+            self.results_full, single_iter_results = self.update_full_results(
+                results_full=self.results_full,
+                iter_results=iter_results
+            )
+
+            # map local feature indices to global feature indices
+            single_iter_results = self.map_local_feats_to_gt(
+                iter_results=single_iter_results,
+                r=r,
+                hbins=non_converged_hbins
+            )
+
+            comb_sig_feats_gt = [model[0] for model in single_iter_results.values()]
+
+            # update the current best results
+            self.J_best, self.J_star = _update_best_models(
+                J_best=self.J_best,
+                J_star=self.J_star,
+                single_iter_results=single_iter_results,
+                non_converged_hbins=non_converged_hbins,
+                metric=self.metric
+            )
+
+            # update converged horizontal partitions
+            non_converged_hbins = self.convergence_check(
+                r=r,
+                J_star=self.J_star,
+                non_converged_hbins=non_converged_hbins
+            )
+
+            # update feature list shared with other partitions
+            M = self.feature_share(
+                r=r,
+                results_full=self.results_full,
+                comb_sig_feats_gt=comb_sig_feats_gt,
+                non_converged_hbins=non_converged_hbins,
+                M=M
+            )
+
+            print(f&#34;M: {M}&#34;) if self.verbose else None
+            self.M_history.update([(r, M)])
+
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            self.time_per_iteration.append(elapsed_time)
+            if len(non_converged_hbins) == 0:
+                self.n_iter_conv = r + 1
+                print(f&#34;All horizontal partitions have converged. Final iter count: {r + 1}&#34;)
+                break
+
+        self.labels = Y_train
+        self.data = X_train
+        self.build_final_model(J_best=self.J_best)
+
+        for value in self.results_full.values():
+            # remove the features_passed from results_full
+            value.pop()
+
+        return self
+
+    def get_support(self, indices=False):
+        &#34;&#34;&#34;
+        Get the feature support mask or indices.
+
+        Parameters
+        ----------
+        indices : bool, optional
+            If True, returns the indices of the supported features.
+            If False (default), returns a boolean mask indicating supported features.
+
+        Returns
+        -------
+        numpy.ndarray
+            If indices is True, a numpy array containing the indices of the supported features.
+            If indices is False, a boolean mask indicating supported features.
+
+        Raises
+        ------
+        NotFittedError
+            If the estimator is not fitted.
+        &#34;&#34;&#34;
+        check_is_fitted(self)
+        mask = np.zeros(self.n_features, dtype=bool)
+
+        if type(self.features_) is int:
+            mask[self.features_] = True
+        else:
+            mask[list(self.features_)] = True
+        return self.features_ if indices else mask
+
+    def transform(self, X):
+        &#34;&#34;&#34;
+        Reduce X to the selected features.
+
+        Parameters
+        ----------
+        X : array of shape [n_samples, n_features]
+            The input samples.
+
+        Returns
+        -------
+        array of shape [n_samples, n_selected_features]
+            The input samples with only the selected features.
+        &#34;&#34;&#34;
+        mask = self.get_support()
+        if not mask.any():
+            warnings.warn(
+                (
+                    &#34;No features were selected: either the data is&#34;
+                    &#34; too noisy or the selection test too strict.&#34;
+                ),
+                UserWarning,
+            )
+            if hasattr(X, &#34;iloc&#34;):
+                return X.iloc[:, :0]
+            return np.empty(0, dtype=X.dtype).reshape((X.shape[0], 0))
+        return _safe_indexing(X, mask, axis=1)
+
+    def feature_share(
+            self,
+            r: int,
+            results_full: dict,
+            comb_sig_feats_gt: list,
+            non_converged_hbins: list,
+            M: dict
+    ):
+        &#34;&#34;&#34;
+        Computes the features to be shared with each bin in the subsequent iteration.
+
+        Parameters
+        ----------
+        r : int
+            Current iteration.
+        results_full : dict
+            Dictionary containing the results from all iterations.
+        comb_sig_feats_gt : list
+            List of global feature indices from models in the current iteration.
+        non_converged_hbins : list
+            List of horizontal partition indices that have not converged.
+
+        Returns
+        -------
+        M : dict
+            Dictionary containing the features to be shared with each bin in the subsequent iteration.
+        &#34;&#34;&#34;
+        if self.feature_sharing == &#39;latest&#39;:
+            M = {i: 0 for i in range(self.n_hbins)}  # reset M dict if feature sharing is set to latest
+
+        for j in non_converged_hbins:
+            if self.output == &#39;ensemble&#39;:
+                M[j] = remove_feature_duplication(
+                    [results_full[(r, i, j)][0] for i in range(self.n_vbins)])
+
+            elif self.feature_sharing == &#39;top_k&#39;:
+                top_k_model_feats = [sorted(results_full.values(), key=lambda x: x[1], reverse=True)[i][0] for i in
+                                     range(min(self.k,
+                                               len(results_full.values())))]
+                M[j] = remove_feature_duplication(top_k_model_feats)
+
+            else:
+                M[j] = remove_feature_duplication(
+                    comb_sig_feats_gt)
+
+        return M
+
+    def final_model(self, model_ensemble: dict) -&gt; None:
+        &#34;&#34;&#34;
+        Helper function for generating the final model based on the ensemble of models.
+
+        Parameters
+        ----------
+        model_ensemble : dict
+            Contains the ensemble of models. Each key is a separate model, and the value is a list containing a list of
+            the feature indices used for that model and the model object itself.
+        &#34;&#34;&#34;
+
+        if self.output != &#39;ensemble&#39;:
+            raise ValueError(&#34;Final model only valid for ensemble output&#34;)
+
+        idx = range(self.data.shape[1])
+
+        df = pd.DataFrame(columns=model_ensemble.keys(), index=idx)
+        for key, value in model_ensemble.items():
+            coefs = value[1].params
+            feat_index = value[0]
+            for val in zip(feat_index, coefs):
+                df.loc[val[0], key] = val[1]
+
+        df.fillna(0, inplace=True)
+        df[&#39;mean&#39;] = df.mean(axis=1)
+
+        self.model_coef = np.array(df[df[&#39;mean&#39;] != 0][&#39;mean&#39;])  # mean for every feature coeff
+        self.model_features_num = list(df[df[&#39;mean&#39;] != 0].index)
+
+    def convergence_check(
+            self,
+            r: int,
+            J_star: dict,
+            non_converged_hbins: list
+    ) -&gt; list:
+        &#34;&#34;&#34;
+        Checks if the tolerance condition has been met for the current iteration.
+
+        Parameters
+        ----------
+        r : int
+            Current iteration number.
+        J_star : dict
+            Dictionary of best models from each horizontal partition.
+        non_converged_hbins : list
+            List of horizontal partitions that have not converged.
+
+        Returns
+        -------
+        hbins_not_converged : list
+            Indices of horizontal partition that have not converged.
+        &#34;&#34;&#34;
+        hbins_converged = []
+        for hbin in non_converged_hbins:
+            if J_star[hbin] == 1:
+                print(f&#34;Iter {r}. The best model in hbin {hbin} cannot be improved further&#34;) if self.verbose else None
+                hbins_converged.append(hbin)
+
+            elif r &gt;= 2 and J_star[hbin][r] == J_star[hbin][r - 1] and J_star[hbin][r] == J_star[hbin][r - 2]:
+                print(
+                    f&#34;Iter {r}. No appreciable improvement over the last 3 iterations in hbin {hbin}&#34;) if self.verbose else None
+                hbins_converged.append(hbin)
+
+        non_converged_set = set(non_converged_hbins)
+        converged_set = set(hbins_converged)
+        return list(non_converged_set - converged_set)
+
+    def map_local_feats_to_gt(
+            self,
+            iter_results: dict,
+            r: int,
+            hbins: list
+    ) -&gt; dict:
+        &#34;&#34;&#34;
+        Maps local feature indices to global feature indices for each model in the current iteration.
+
+        Parameters
+        ----------
+        iter_results : dict
+            Dictionary with the results of the iteration.
+        r : int
+            Number of the current iteration.
+        hbins : list
+            List of horizontal partitions that have not converged.
+
+        Returns
+        -------
+        iter_results : dict
+            Dict updated with global feature indices.
+        &#34;&#34;&#34;
+        for i, j in itertools.product(range(self.n_vbins), hbins):
+            iter_results[(r, i, j)][0] = list(np.array(iter_results[(r, i, j)][2])[list(iter_results[(r, i, j)][0])])
+
+        return iter_results
+
+    def join_features(self, features: list, M: Union[set, int]) -&gt; list:
+        &#34;&#34;&#34;
+        Joins the feature partitions to the relevant information from previous iterations.
+
+        Parameters
+        ----------
+        features : list
+            Feature partition (list of features for the partition).
+        M : set or int
+            Features selected at the previous round, feature list shared with other partitions.
+
+        Returns
+        -------
+        list
+            List of feature partition augmented with M (features selected at the previous round).
+        &#34;&#34;&#34;
+        if isinstance(M, int):
+            return list(set(features).union([M]))
+
+        if isinstance(M, set):
+            return list(set(features).union(M))
+
+    def update_full_results(
+            self,
+            results_full: dict,
+            iter_results: dict
+    ):
+        &#34;&#34;&#34;
+        Updates the full results dictionary with the results from the current iteration.
+
+        Parameters
+        ----------
+        results_full : dict
+            Dictionary containing the results from all iterations.
+        iter_results : dict
+            Dictionary containing the results from the current iteration.
+
+        Returns
+        -------
+        results_full : dict
+            Updated full result dictionary.
+        single_iter_results : dict
+            Dictionary containing the results from the current iteration where values are list of 3 elements:
+            selected features, evaluation and initial features (one partition augmented with features from previous round)
+            on which feature selection is applied.
+        &#34;&#34;&#34;
+        single_iter_results = {
+            result.drfsc_index:
+                [result.features, result.evaluation, result.features_passed] for result in iter_results.values()
+        }
+        results_full |= single_iter_results
+        return results_full, single_iter_results
+
+    def build_final_model(self, J_best):
+        &#34;&#34;&#34;
+        Builds the final model based on the output specified.
+        Output options: &#39;single&#39;, &#39;ensemble&#39;.
+
+        Parameters
+        ----------
+        J_best : dict
+            Dictionary containing the best model for each horizontal partition.
+        &#34;&#34;&#34;
+
+        if self.output == &#39;ensemble&#39;:
+            ensemble = {}
+            for h_bin in range(self.n_hbins):
+                model = sm.Logit(
+                    self.labels,
+                    self.data[:, J_best[h_bin][0]]
+                ).fit(disp=False, method=&#39;lbfgs&#39;)
+                ensemble[f&#34;model_h{str(h_bin)}&#34;] = [J_best[h_bin][0], model]
+
+            self.ensemble = ensemble
+            self.final_model(self.ensemble)
+            self.features_num = self.model_features_num
+
+        else:
+            self.features_num = _select_single_model(J_best=J_best)[0]
+
+        self.features_ = self.features_num
+        self.model = sm.Logit(
+            self.labels,
+            self.data[:, self.features_num]
+        ).fit_regularized(method=&#39;l1&#39;, alpha=0.1)
+
+        self.coef_ = self.model.params
+
+    class _Result():
+        def __init__(self, features: list, drfsc_index, features_passed, evaluation=None, model=None):
+            self.evaluation = evaluation
+            self.features = features
+            self.features_passed = features_passed
+            self.drfsc_index = drfsc_index
+            self.model = model
+
+
+def _select_single_model(J_best: dict) -&gt; list:
+    &#34;&#34;&#34;
+    Returns model with the highest performance evaluation.
+
+    Parameters
+    ----------
+    J_best : dict
+        Dictionary containing as keys the horizontal partition index and as values the best model for that partition (list)
+        in terms of feature indices, performance evaluation (float), and metric used for evaluation (str).
+
+    Returns
+    -------
+    best_model : list
+        List containing the best model for the entire dataset.
+    &#34;&#34;&#34;
+    return sorted(J_best.values(), key=lambda x: x[1], reverse=True)[0]
+
+def _update_best_models(
+    J_best: dict,
+    J_star: dict,
+    single_iter_results: dict,
+    non_converged_hbins: list,
+    metric: str
+) -&gt; Tuple[dict, dict]:
+    &#34;&#34;&#34;
+            Compares results from the current iteration against current best models.
+            If a model from the current iteration is better, it is saved.
+
+            Parameters
+            ----------
+            J_best : dict
+                Dictionary containing as keys the horizontal partition index and as values the best model for that partition.
+            J_star : dict
+                Dictionary containing only the performance evaluation of the best model for each horizontal partition (list).
+
+            Returns
+            -------
+            J_best : dict
+                Dictionary containing as keys the horizontal partition index and as values the best model for that partition (list)
+                in terms of feature indices, performance evaluation (float), and metric used for evaluation (str).
+            J_star : dict
+                Dictionary containing only the performance evaluation of the best model for each horizontal partition (list).
+            &#34;&#34;&#34;
+    for key, model in single_iter_results.items():
+        if key[2] in non_converged_hbins and model[1] &gt; J_best[key[2]][1]:
+            print(f&#34;New best model for hbin {key[2]}. {metric}={round(model[1], 5)} -- Model features {model[0]}&#34;)
+            J_best[key[2]] = [model[i] for i in range(3)]
+    for j in non_converged_hbins:
+        J_star[j].append(J_best[j][1])
+
+    return J_best, J_star</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="dfs.DFS"><code class="flex name class">
+<span>class <span class="ident">DFS</span></span>
+<span>(</span><span>local_fs_method=SelectKBest(k=3, score_func=&lt;function chi2&gt;), n_vbins: int = 1, n_hbins: int = 1, n_runs: int = 1, redistribute_features: bool = False, feature_sharing: str = 'all', k: int = 0, output: str = 'single', metric: str = 'roc_auc', verbose: bool = False, max_processes: int = None, estimator=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Transformer that performs Distributed Feature Selection (DFS).</p>
+<p>Read more in the official documentation of the Python package.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>local_fs_method</code></strong> :&ensp;<code>object</code>, optional</dt>
+<dd>The machine learning model used for feature selection for each data partition. Default is a Support Vector
+Classifier (SVC) with a linear kernel and a random seed of 42.</dd>
+<dt><strong><code>n_vbins</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Number of vertical partitions to create for the data. Defaults to 1.</dd>
+<dt><strong><code>n_hbins</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Number of horizontal partitions to create for the data. If output = 'ensemble', each hbin will converge to
+its own best model. Defaults to 1.</dd>
+<dt><strong><code>n_runs</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Number of feature-sharing iterations to perform. Larger numbers may yield better results, but also take longer.
+Defaults to 1.</dd>
+<dt><strong><code>redistribute_features</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, the base features included in each bin will be shuffled at each feature-sharing iteration.
+Does not affect feature sharing. Defaults to False.</dd>
+<dt><strong><code>feature_sharing</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The method used to share features. Defaults to 'all'. Options (str): 'all', 'latest', 'top_k'.
+If feature_sharing = 'all', the entire history of best features from all sub-processes will be shared.
+If feature_sharing = 'latest', features from all sub-processes at the current iteration will be shared.
+If feature_sharing = 'top_k', the best k features will be shared.</dd>
+<dt><strong><code>k</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Number of best features to share. Only used if feature_sharing = 'top_k'. Defaults to 0.</dd>
+<dt><strong><code>output</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Output type desired. Options (str): 'single', 'ensemble'. If output = 'single', the best model from all
+sub-processes will be returned. If output = 'ensemble', the best model from each horizontal partition will be returned.
+If output = 'ensemble', no features between different horizontal partitions will be created. Defaults to 'single'.</dd>
+<dt><strong><code>metric</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Evaluation metric used in the optimization process.
+Options (str) : ['acc', 'roc_auc', 'weighted', 'avg_prec', 'f1', 'auprc']. Defaults to 'roc_auc'.
+For more information on the metrics, see the documentation for the sklearn.metrics module.</dd>
+<dt><strong><code>verbose</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, prints extra information. Defaults to False.</dd>
+<dt><strong><code>max_processes</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Enforces maximum number of processes that can be generated. If None, will use all available cores.
+Defaults to None.</dd>
+<dt><strong><code>estimator</code></strong> :&ensp;<code>estimator instance</code>, optional</dt>
+<dd>An unfitted estimator. Machine learning model used for evaluation of the results for all sub-processes.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DFS(BaseEstimator, TransformerMixin):
+    &#34;&#34;&#34;
+    Transformer that performs Distributed Feature Selection (DFS).
+
+    Read more in the official documentation of the Python package.
+
+    Parameters
+    ----------
+    local_fs_method : object, optional
+            The machine learning model used for feature selection for each data partition. Default is a Support Vector
+            Classifier (SVC) with a linear kernel and a random seed of 42.
+    n_vbins : int, optional
+            Number of vertical partitions to create for the data. Defaults to 1.
+    n_hbins : int, optional
+            Number of horizontal partitions to create for the data. If output = &#39;ensemble&#39;, each hbin will converge to
+            its own best model. Defaults to 1.
+    n_runs : int, optional
+            Number of feature-sharing iterations to perform. Larger numbers may yield better results, but also take longer.
+            Defaults to 1.
+    redistribute_features : bool, optional
+            If True, the base features included in each bin will be shuffled at each feature-sharing iteration.
+            Does not affect feature sharing. Defaults to False.
+    feature_sharing : str, optional
+            The method used to share features. Defaults to &#39;all&#39;. Options (str): &#39;all&#39;, &#39;latest&#39;, &#39;top_k&#39;.
+            If feature_sharing = &#39;all&#39;, the entire history of best features from all sub-processes will be shared.
+            If feature_sharing = &#39;latest&#39;, features from all sub-processes at the current iteration will be shared.
+            If feature_sharing = &#39;top_k&#39;, the best k features will be shared.
+    k : int, optional
+            Number of best features to share. Only used if feature_sharing = &#39;top_k&#39;. Defaults to 0.
+    output : str, optional
+            Output type desired. Options (str): &#39;single&#39;, &#39;ensemble&#39;. If output = &#39;single&#39;, the best model from all
+            sub-processes will be returned. If output = &#39;ensemble&#39;, the best model from each horizontal partition will be returned.
+            If output = &#39;ensemble&#39;, no features between different horizontal partitions will be created. Defaults to &#39;single&#39;.
+    metric : str, optional
+            Evaluation metric used in the optimization process.
+            Options (str) : [&#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;]. Defaults to &#39;roc_auc&#39;.
+            For more information on the metrics, see the documentation for the sklearn.metrics module.
+    verbose : bool, optional
+            If True, prints extra information. Defaults to False.
+    max_processes : int, optional
+            Enforces maximum number of processes that can be generated. If None, will use all available cores.
+            Defaults to None.
+    estimator : estimator instance, optional
+            An unfitted estimator. Machine learning model used for evaluation of the results for all sub-processes.
+    &#34;&#34;&#34;
+
+    def __init__(
+            self,
+            local_fs_method=SelectKBest(score_func=chi2, k=3),
+            n_vbins: int = 1,
+            n_hbins: int = 1,
+            n_runs: int = 1,
+            redistribute_features: bool = False,
+            feature_sharing: str = &#39;all&#39;,
+            k: int = 0,
+            output: str = &#39;single&#39;,
+            metric: str = &#39;roc_auc&#39;,
+            verbose: bool = False,
+            max_processes: int = None,
+            estimator=None
+    ):
+        # validation
+        if local_fs_method is not None and not hasattr(local_fs_method, &#39;fit&#39;):
+            raise ValueError(&#34;local_fs_method must be an instance with a fit method.&#34;)
+
+        if not isinstance(n_vbins, int) or n_vbins &lt; 1:
+            raise ValueError(&#34;n_vbins must be a positive integer.&#34;)
+
+        if not isinstance(n_hbins, int) or n_hbins &lt; 1:
+            raise ValueError(&#34;n_hbins must be a positive integer.&#34;)
+
+        if not isinstance(n_runs, int) or n_runs &lt; 1:
+            raise ValueError(&#34;n_runs must be a positive integer.&#34;)
+
+        if not isinstance(k, int) or k &lt; 0:
+            raise ValueError(&#34;k must be a non-negative integer.&#34;)
+
+        if max_processes is not None and (not isinstance(max_processes, int) or max_processes &lt; 1):
+            raise ValueError(&#34;max_processes must be None or a positive integer.&#34;)
+
+        if not isinstance(redistribute_features, bool):
+            raise ValueError(&#34;redistribute_features must be a boolean value.&#34;)
+
+        if feature_sharing not in [&#39;all&#39;, &#39;latest&#39;, &#39;top_k&#39;]:
+            raise ValueError(&#34;feature_sharing must be one of &#39;all&#39;, &#39;latest&#39;, or &#39;top_k&#39;.&#34;)
+
+        if not isinstance(output, str) or output not in [&#39;single&#39;, &#39;ensemble&#39;]:
+            raise ValueError(&#34;output must be either &#39;single&#39; or &#39;ensemble&#39;.&#34;)
+
+        if metric not in [&#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, &#39;auprc&#39;]:
+            raise ValueError(&#34;metric must be one of &#39;acc&#39;, &#39;roc_auc&#39;, &#39;weighted&#39;, &#39;avg_prec&#39;, &#39;f1&#39;, or &#39;auprc&#39;.&#34;)
+
+        if not isinstance(verbose, bool):
+            raise ValueError(&#34;verbose must be a boolean value.&#34;)
+
+        if estimator is not None and not hasattr(estimator, &#39;fit&#39;):
+            raise ValueError(&#34;estimator must be an estimator instance with a fit method.&#34;)
+
+        self.estimator = estimator
+        self.metric = metric
+        self.n_vbins = n_vbins
+        self.n_hbins = n_hbins
+        self.n_runs = n_runs
+        self.redistribute_features = redistribute_features
+        self.feature_sharing = feature_sharing
+        self.k = k
+        self.output = output
+        self.verbose = verbose
+        self.loaded_data = 0
+        self.max_processes = max(max_processes, mp.cpu_count()) if max_processes is not None else mp.cpu_count()
+        self.local_fs_method = local_fs_method
+
+        print(f&#34;{self.__class__.__name__} Initialised with parameters: \n \
+        local_fs_method = {local_fs_method}, \n \
+        n_vbins = {n_vbins}, \n \
+        n_hbins = {n_hbins}, \n \
+        n_runs = {n_runs}, \n \
+        redistribute = {redistribute_features}, \n \
+        sharing = {feature_sharing}, \n \
+        k = {k}, \n \
+        output = {output}, \n \
+        metric = {metric}, \n \
+        estimator = {estimator}, \n \
+        max_processes is {self.max_processes} \n ------------&#34;) if self.verbose else None
+
+    def __repr__(self) -&gt; str:
+        &#34;&#34;&#34;
+        Returns a string representation of the object. It includes the class name and the values of the instance variables.
+
+        Returns
+        -------
+        str
+            The string representation of the object.
+
+        &#34;&#34;&#34;
+        return f&#34;{self.__class__.__name__}(local_fs_method = {self.local_fs_method}, n_vbins={self.n_vbins}, \
+                 n_hbins={self.n_hbins}, n_runs={self.n_runs}, redistribute_features={self.redistribute_features}, \
+                 feature_sharing={self.feature_sharing}, k={self.k}, output={self.output}, \
+                 metric={self.metric}, verbose={self.verbose}, max_processes={self.max_processes}, estimator={self.estimator})&#34;
+
+    def fit(self, X_train: Union[np.ndarray, pd.DataFrame], Y_train: Union[np.ndarray, pd.DataFrame]):
+        &#34;&#34;&#34;
+        Learn the features to select from X_train.
+
+        Parameters
+        ----------
+        X_train : array-like of shape (n_samples, n_features)
+            Training vectors, where `n_samples` is the number of samples and
+            `n_features` is the number of features/predictors.
+
+        Y_train : array-like of shape (n_samples,)
+            Target values.
+
+        Returns
+        -------
+        self : object
+            Returns the instance itself.
+        &#34;&#34;&#34;
+
+        if isinstance(X_train, pd.DataFrame):
+            X_train = X_train.to_numpy()
+
+        if isinstance(Y_train, (pd.DataFrame, pd.Series)):
+            Y_train = Y_train.to_numpy()
+
+        self.n_samples, self.n_features = X_train.shape
+
+        # create vertical and horizontal partitions
+        distributed_features, distributed_samples = create_balanced_distributions(
+            labels=Y_train,
+            n_feats=self.n_features,
+            n_vbins=self.n_vbins,
+            n_hbins=self.n_hbins
+        )
+
+        # Initialization
+        self.J_star = {i: [] for i in range(self.n_hbins)}
+        self.J_best = {i: [0, 0] for i in range(self.n_hbins)}
+        self.results_full = {}
+        self.M_history = {}
+        self.n_iter_conv = self.n_runs
+        M = {i: 0 for i in range(self.n_hbins)}  # selected features
+        non_converged_hbins = np.arange(self.n_hbins).tolist()
+
+        if self.verbose:
+            print(
+                f&#34;Number of Samples: {self.n_samples}. Horizontal Disitribution SHAPE: {np.shape(distributed_samples)}&#34;)
+            print(
+                f&#34;Number of Features: {self.n_features}. Vertical Distribution SHAPE: {np.shape(distributed_features)}&#34;)
+
+        if self.n_hbins == 1 and self.n_vbins == 1:
+            if self.output == &#39;ensemble&#39;:
+                print(
+                    &#34;WARNING: Ensemble output is not possible with n_hbins = 1 and n_vbins = 1. Setting output = &#39;single&#39;&#34;)
+            self.output = &#39;single&#39;
+
+            self.local_fs_method.fit(X_train, Y_train)
+            self.local_fs_method.get_support()
+            self.J_best = {0: [self.local_fs_method.get_support()]}
+            self.build_final_model(J_best=self.J_best)
+            return self.J_best
+
+        self.time_per_iteration = []
+        for r in range(self.n_runs):
+            start_time = time.time()
+            iter_results = {}  # initialise dictionary for storing results
+
+            if self.redistribute_features:
+                distributed_features, _ = create_balanced_distributions(
+                    labels=Y_train,
+                    n_feats=self.n_features,
+                    n_vbins=self.n_vbins,
+                    n_hbins=self.n_hbins
+                )
+            result_obj = []
+
+            def store_results(obj, indices, features_passed):  # callback for mp
+                performance = obj.get_best_performance() if hasattr(obj, &#39;get_best_performance&#39;) else None
+                result = self._Result(list(obj.get_support(indices=True)), indices, features_passed,
+                                      evaluation=performance)
+                result_obj.append(result)
+
+            pool = mp.Pool(processes=min((self.n_vbins * len(non_converged_hbins)), self.max_processes),
+                           maxtasksperchild=1)
+            for i, j in itertools.product(range(self.n_vbins), non_converged_hbins):
+                feature_partition = list(distributed_features[:, i])
+                feature_share = self.join_features(
+                    features=feature_partition,
+                    M=M[j]
+                )
+                features_passed = [int(i) for i in feature_share]
+                sample_indices = list(distributed_samples[:, j])
+
+                pool.apply_async(
+                    self.local_fs_method.fit,
+                    args=(X_train[:, features_passed][sample_indices, :], Y_train[sample_indices]),
+                    callback=functools.partial(store_results, indices=(r, i, j), features_passed=features_passed)
+                )
+
+            pool.close()
+            pool.join()
+
+            if len(result_obj) != (
+                    self.n_vbins * len(non_converged_hbins)):
+                print(
+                    f&#34;result_obj length is {len(result_obj)}. Should be {(self.n_vbins * len(non_converged_hbins))}&#34;)
+
+            for result in result_obj:
+                # predict on all sub-processes
+                global_features = [result.features_passed[i] for i in result.features]
+                if result.evaluation is None:
+                    result.model, result.evaluation = evaluate_interim_model(
+                        model_features=global_features,
+                        X=X_train,
+                        y=Y_train,
+                        metric=self.metric,
+                        model=self.estimator
+                    )
+
+                iter_results[result.drfsc_index] = result
+
+            # check if every result is here
+            for i, j in itertools.product(range(self.n_vbins), non_converged_hbins):
+                if (r, i, j) not in [x.drfsc_index for x in result_obj]:
+                    print(f&#34;missing result {(r, i, j)}&#34;)
+                    iter_results[(r, i, j)] = [[0], 0, self.output, [0]]
+
+            # update full results dict
+            self.results_full, single_iter_results = self.update_full_results(
+                results_full=self.results_full,
+                iter_results=iter_results
+            )
+
+            # map local feature indices to global feature indices
+            single_iter_results = self.map_local_feats_to_gt(
+                iter_results=single_iter_results,
+                r=r,
+                hbins=non_converged_hbins
+            )
+
+            comb_sig_feats_gt = [model[0] for model in single_iter_results.values()]
+
+            # update the current best results
+            self.J_best, self.J_star = _update_best_models(
+                J_best=self.J_best,
+                J_star=self.J_star,
+                single_iter_results=single_iter_results,
+                non_converged_hbins=non_converged_hbins,
+                metric=self.metric
+            )
+
+            # update converged horizontal partitions
+            non_converged_hbins = self.convergence_check(
+                r=r,
+                J_star=self.J_star,
+                non_converged_hbins=non_converged_hbins
+            )
+
+            # update feature list shared with other partitions
+            M = self.feature_share(
+                r=r,
+                results_full=self.results_full,
+                comb_sig_feats_gt=comb_sig_feats_gt,
+                non_converged_hbins=non_converged_hbins,
+                M=M
+            )
+
+            print(f&#34;M: {M}&#34;) if self.verbose else None
+            self.M_history.update([(r, M)])
+
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            self.time_per_iteration.append(elapsed_time)
+            if len(non_converged_hbins) == 0:
+                self.n_iter_conv = r + 1
+                print(f&#34;All horizontal partitions have converged. Final iter count: {r + 1}&#34;)
+                break
+
+        self.labels = Y_train
+        self.data = X_train
+        self.build_final_model(J_best=self.J_best)
+
+        for value in self.results_full.values():
+            # remove the features_passed from results_full
+            value.pop()
+
+        return self
+
+    def get_support(self, indices=False):
+        &#34;&#34;&#34;
+        Get the feature support mask or indices.
+
+        Parameters
+        ----------
+        indices : bool, optional
+            If True, returns the indices of the supported features.
+            If False (default), returns a boolean mask indicating supported features.
+
+        Returns
+        -------
+        numpy.ndarray
+            If indices is True, a numpy array containing the indices of the supported features.
+            If indices is False, a boolean mask indicating supported features.
+
+        Raises
+        ------
+        NotFittedError
+            If the estimator is not fitted.
+        &#34;&#34;&#34;
+        check_is_fitted(self)
+        mask = np.zeros(self.n_features, dtype=bool)
+
+        if type(self.features_) is int:
+            mask[self.features_] = True
+        else:
+            mask[list(self.features_)] = True
+        return self.features_ if indices else mask
+
+    def transform(self, X):
+        &#34;&#34;&#34;
+        Reduce X to the selected features.
+
+        Parameters
+        ----------
+        X : array of shape [n_samples, n_features]
+            The input samples.
+
+        Returns
+        -------
+        array of shape [n_samples, n_selected_features]
+            The input samples with only the selected features.
+        &#34;&#34;&#34;
+        mask = self.get_support()
+        if not mask.any():
+            warnings.warn(
+                (
+                    &#34;No features were selected: either the data is&#34;
+                    &#34; too noisy or the selection test too strict.&#34;
+                ),
+                UserWarning,
+            )
+            if hasattr(X, &#34;iloc&#34;):
+                return X.iloc[:, :0]
+            return np.empty(0, dtype=X.dtype).reshape((X.shape[0], 0))
+        return _safe_indexing(X, mask, axis=1)
+
+    def feature_share(
+            self,
+            r: int,
+            results_full: dict,
+            comb_sig_feats_gt: list,
+            non_converged_hbins: list,
+            M: dict
+    ):
+        &#34;&#34;&#34;
+        Computes the features to be shared with each bin in the subsequent iteration.
+
+        Parameters
+        ----------
+        r : int
+            Current iteration.
+        results_full : dict
+            Dictionary containing the results from all iterations.
+        comb_sig_feats_gt : list
+            List of global feature indices from models in the current iteration.
+        non_converged_hbins : list
+            List of horizontal partition indices that have not converged.
+
+        Returns
+        -------
+        M : dict
+            Dictionary containing the features to be shared with each bin in the subsequent iteration.
+        &#34;&#34;&#34;
+        if self.feature_sharing == &#39;latest&#39;:
+            M = {i: 0 for i in range(self.n_hbins)}  # reset M dict if feature sharing is set to latest
+
+        for j in non_converged_hbins:
+            if self.output == &#39;ensemble&#39;:
+                M[j] = remove_feature_duplication(
+                    [results_full[(r, i, j)][0] for i in range(self.n_vbins)])
+
+            elif self.feature_sharing == &#39;top_k&#39;:
+                top_k_model_feats = [sorted(results_full.values(), key=lambda x: x[1], reverse=True)[i][0] for i in
+                                     range(min(self.k,
+                                               len(results_full.values())))]
+                M[j] = remove_feature_duplication(top_k_model_feats)
+
+            else:
+                M[j] = remove_feature_duplication(
+                    comb_sig_feats_gt)
+
+        return M
+
+    def final_model(self, model_ensemble: dict) -&gt; None:
+        &#34;&#34;&#34;
+        Helper function for generating the final model based on the ensemble of models.
+
+        Parameters
+        ----------
+        model_ensemble : dict
+            Contains the ensemble of models. Each key is a separate model, and the value is a list containing a list of
+            the feature indices used for that model and the model object itself.
+        &#34;&#34;&#34;
+
+        if self.output != &#39;ensemble&#39;:
+            raise ValueError(&#34;Final model only valid for ensemble output&#34;)
+
+        idx = range(self.data.shape[1])
+
+        df = pd.DataFrame(columns=model_ensemble.keys(), index=idx)
+        for key, value in model_ensemble.items():
+            coefs = value[1].params
+            feat_index = value[0]
+            for val in zip(feat_index, coefs):
+                df.loc[val[0], key] = val[1]
+
+        df.fillna(0, inplace=True)
+        df[&#39;mean&#39;] = df.mean(axis=1)
+
+        self.model_coef = np.array(df[df[&#39;mean&#39;] != 0][&#39;mean&#39;])  # mean for every feature coeff
+        self.model_features_num = list(df[df[&#39;mean&#39;] != 0].index)
+
+    def convergence_check(
+            self,
+            r: int,
+            J_star: dict,
+            non_converged_hbins: list
+    ) -&gt; list:
+        &#34;&#34;&#34;
+        Checks if the tolerance condition has been met for the current iteration.
+
+        Parameters
+        ----------
+        r : int
+            Current iteration number.
+        J_star : dict
+            Dictionary of best models from each horizontal partition.
+        non_converged_hbins : list
+            List of horizontal partitions that have not converged.
+
+        Returns
+        -------
+        hbins_not_converged : list
+            Indices of horizontal partition that have not converged.
+        &#34;&#34;&#34;
+        hbins_converged = []
+        for hbin in non_converged_hbins:
+            if J_star[hbin] == 1:
+                print(f&#34;Iter {r}. The best model in hbin {hbin} cannot be improved further&#34;) if self.verbose else None
+                hbins_converged.append(hbin)
+
+            elif r &gt;= 2 and J_star[hbin][r] == J_star[hbin][r - 1] and J_star[hbin][r] == J_star[hbin][r - 2]:
+                print(
+                    f&#34;Iter {r}. No appreciable improvement over the last 3 iterations in hbin {hbin}&#34;) if self.verbose else None
+                hbins_converged.append(hbin)
+
+        non_converged_set = set(non_converged_hbins)
+        converged_set = set(hbins_converged)
+        return list(non_converged_set - converged_set)
+
+    def map_local_feats_to_gt(
+            self,
+            iter_results: dict,
+            r: int,
+            hbins: list
+    ) -&gt; dict:
+        &#34;&#34;&#34;
+        Maps local feature indices to global feature indices for each model in the current iteration.
+
+        Parameters
+        ----------
+        iter_results : dict
+            Dictionary with the results of the iteration.
+        r : int
+            Number of the current iteration.
+        hbins : list
+            List of horizontal partitions that have not converged.
+
+        Returns
+        -------
+        iter_results : dict
+            Dict updated with global feature indices.
+        &#34;&#34;&#34;
+        for i, j in itertools.product(range(self.n_vbins), hbins):
+            iter_results[(r, i, j)][0] = list(np.array(iter_results[(r, i, j)][2])[list(iter_results[(r, i, j)][0])])
+
+        return iter_results
+
+    def join_features(self, features: list, M: Union[set, int]) -&gt; list:
+        &#34;&#34;&#34;
+        Joins the feature partitions to the relevant information from previous iterations.
+
+        Parameters
+        ----------
+        features : list
+            Feature partition (list of features for the partition).
+        M : set or int
+            Features selected at the previous round, feature list shared with other partitions.
+
+        Returns
+        -------
+        list
+            List of feature partition augmented with M (features selected at the previous round).
+        &#34;&#34;&#34;
+        if isinstance(M, int):
+            return list(set(features).union([M]))
+
+        if isinstance(M, set):
+            return list(set(features).union(M))
+
+    def update_full_results(
+            self,
+            results_full: dict,
+            iter_results: dict
+    ):
+        &#34;&#34;&#34;
+        Updates the full results dictionary with the results from the current iteration.
+
+        Parameters
+        ----------
+        results_full : dict
+            Dictionary containing the results from all iterations.
+        iter_results : dict
+            Dictionary containing the results from the current iteration.
+
+        Returns
+        -------
+        results_full : dict
+            Updated full result dictionary.
+        single_iter_results : dict
+            Dictionary containing the results from the current iteration where values are list of 3 elements:
+            selected features, evaluation and initial features (one partition augmented with features from previous round)
+            on which feature selection is applied.
+        &#34;&#34;&#34;
+        single_iter_results = {
+            result.drfsc_index:
+                [result.features, result.evaluation, result.features_passed] for result in iter_results.values()
+        }
+        results_full |= single_iter_results
+        return results_full, single_iter_results
+
+    def build_final_model(self, J_best):
+        &#34;&#34;&#34;
+        Builds the final model based on the output specified.
+        Output options: &#39;single&#39;, &#39;ensemble&#39;.
+
+        Parameters
+        ----------
+        J_best : dict
+            Dictionary containing the best model for each horizontal partition.
+        &#34;&#34;&#34;
+
+        if self.output == &#39;ensemble&#39;:
+            ensemble = {}
+            for h_bin in range(self.n_hbins):
+                model = sm.Logit(
+                    self.labels,
+                    self.data[:, J_best[h_bin][0]]
+                ).fit(disp=False, method=&#39;lbfgs&#39;)
+                ensemble[f&#34;model_h{str(h_bin)}&#34;] = [J_best[h_bin][0], model]
+
+            self.ensemble = ensemble
+            self.final_model(self.ensemble)
+            self.features_num = self.model_features_num
+
+        else:
+            self.features_num = _select_single_model(J_best=J_best)[0]
+
+        self.features_ = self.features_num
+        self.model = sm.Logit(
+            self.labels,
+            self.data[:, self.features_num]
+        ).fit_regularized(method=&#39;l1&#39;, alpha=0.1)
+
+        self.coef_ = self.model.params
+
+    class _Result():
+        def __init__(self, features: list, drfsc_index, features_passed, evaluation=None, model=None):
+            self.evaluation = evaluation
+            self.features = features
+            self.features_passed = features_passed
+            self.drfsc_index = drfsc_index
+            self.model = model</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>sklearn.base.BaseEstimator</li>
+<li>sklearn.utils._estimator_html_repr._HTMLDocumentationLinkMixin</li>
+<li>sklearn.utils._metadata_requests._MetadataRequester</li>
+<li>sklearn.base.TransformerMixin</li>
+<li>sklearn.utils._set_output._SetOutputMixin</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="dfs.DFS.build_final_model"><code class="name flex">
+<span>def <span class="ident">build_final_model</span></span>(<span>self, J_best)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Builds the final model based on the output specified.
+Output options: 'single', 'ensemble'.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>J_best</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary containing the best model for each horizontal partition.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build_final_model(self, J_best):
+    &#34;&#34;&#34;
+    Builds the final model based on the output specified.
+    Output options: &#39;single&#39;, &#39;ensemble&#39;.
+
+    Parameters
+    ----------
+    J_best : dict
+        Dictionary containing the best model for each horizontal partition.
+    &#34;&#34;&#34;
+
+    if self.output == &#39;ensemble&#39;:
+        ensemble = {}
+        for h_bin in range(self.n_hbins):
+            model = sm.Logit(
+                self.labels,
+                self.data[:, J_best[h_bin][0]]
+            ).fit(disp=False, method=&#39;lbfgs&#39;)
+            ensemble[f&#34;model_h{str(h_bin)}&#34;] = [J_best[h_bin][0], model]
+
+        self.ensemble = ensemble
+        self.final_model(self.ensemble)
+        self.features_num = self.model_features_num
+
+    else:
+        self.features_num = _select_single_model(J_best=J_best)[0]
+
+    self.features_ = self.features_num
+    self.model = sm.Logit(
+        self.labels,
+        self.data[:, self.features_num]
+    ).fit_regularized(method=&#39;l1&#39;, alpha=0.1)
+
+    self.coef_ = self.model.params</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.convergence_check"><code class="name flex">
+<span>def <span class="ident">convergence_check</span></span>(<span>self, r: int, J_star: dict, non_converged_hbins: list) ‑> list</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if the tolerance condition has been met for the current iteration.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>r</code></strong> :&ensp;<code>int</code></dt>
+<dd>Current iteration number.</dd>
+<dt><strong><code>J_star</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary of best models from each horizontal partition.</dd>
+<dt><strong><code>non_converged_hbins</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of horizontal partitions that have not converged.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>hbins_not_converged</code></strong> :&ensp;<code>list</code></dt>
+<dd>Indices of horizontal partition that have not converged.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def convergence_check(
+        self,
+        r: int,
+        J_star: dict,
+        non_converged_hbins: list
+) -&gt; list:
+    &#34;&#34;&#34;
+    Checks if the tolerance condition has been met for the current iteration.
+
+    Parameters
+    ----------
+    r : int
+        Current iteration number.
+    J_star : dict
+        Dictionary of best models from each horizontal partition.
+    non_converged_hbins : list
+        List of horizontal partitions that have not converged.
+
+    Returns
+    -------
+    hbins_not_converged : list
+        Indices of horizontal partition that have not converged.
+    &#34;&#34;&#34;
+    hbins_converged = []
+    for hbin in non_converged_hbins:
+        if J_star[hbin] == 1:
+            print(f&#34;Iter {r}. The best model in hbin {hbin} cannot be improved further&#34;) if self.verbose else None
+            hbins_converged.append(hbin)
+
+        elif r &gt;= 2 and J_star[hbin][r] == J_star[hbin][r - 1] and J_star[hbin][r] == J_star[hbin][r - 2]:
+            print(
+                f&#34;Iter {r}. No appreciable improvement over the last 3 iterations in hbin {hbin}&#34;) if self.verbose else None
+            hbins_converged.append(hbin)
+
+    non_converged_set = set(non_converged_hbins)
+    converged_set = set(hbins_converged)
+    return list(non_converged_set - converged_set)</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.feature_share"><code class="name flex">
+<span>def <span class="ident">feature_share</span></span>(<span>self, r: int, results_full: dict, comb_sig_feats_gt: list, non_converged_hbins: list, M: dict)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Computes the features to be shared with each bin in the subsequent iteration.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>r</code></strong> :&ensp;<code>int</code></dt>
+<dd>Current iteration.</dd>
+<dt><strong><code>results_full</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary containing the results from all iterations.</dd>
+<dt><strong><code>comb_sig_feats_gt</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of global feature indices from models in the current iteration.</dd>
+<dt><strong><code>non_converged_hbins</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of horizontal partition indices that have not converged.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>M</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary containing the features to be shared with each bin in the subsequent iteration.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def feature_share(
+        self,
+        r: int,
+        results_full: dict,
+        comb_sig_feats_gt: list,
+        non_converged_hbins: list,
+        M: dict
+):
+    &#34;&#34;&#34;
+    Computes the features to be shared with each bin in the subsequent iteration.
+
+    Parameters
+    ----------
+    r : int
+        Current iteration.
+    results_full : dict
+        Dictionary containing the results from all iterations.
+    comb_sig_feats_gt : list
+        List of global feature indices from models in the current iteration.
+    non_converged_hbins : list
+        List of horizontal partition indices that have not converged.
+
+    Returns
+    -------
+    M : dict
+        Dictionary containing the features to be shared with each bin in the subsequent iteration.
+    &#34;&#34;&#34;
+    if self.feature_sharing == &#39;latest&#39;:
+        M = {i: 0 for i in range(self.n_hbins)}  # reset M dict if feature sharing is set to latest
+
+    for j in non_converged_hbins:
+        if self.output == &#39;ensemble&#39;:
+            M[j] = remove_feature_duplication(
+                [results_full[(r, i, j)][0] for i in range(self.n_vbins)])
+
+        elif self.feature_sharing == &#39;top_k&#39;:
+            top_k_model_feats = [sorted(results_full.values(), key=lambda x: x[1], reverse=True)[i][0] for i in
+                                 range(min(self.k,
+                                           len(results_full.values())))]
+            M[j] = remove_feature_duplication(top_k_model_feats)
+
+        else:
+            M[j] = remove_feature_duplication(
+                comb_sig_feats_gt)
+
+    return M</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.final_model"><code class="name flex">
+<span>def <span class="ident">final_model</span></span>(<span>self, model_ensemble: dict) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Helper function for generating the final model based on the ensemble of models.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>model_ensemble</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Contains the ensemble of models. Each key is a separate model, and the value is a list containing a list of
+the feature indices used for that model and the model object itself.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def final_model(self, model_ensemble: dict) -&gt; None:
+    &#34;&#34;&#34;
+    Helper function for generating the final model based on the ensemble of models.
+
+    Parameters
+    ----------
+    model_ensemble : dict
+        Contains the ensemble of models. Each key is a separate model, and the value is a list containing a list of
+        the feature indices used for that model and the model object itself.
+    &#34;&#34;&#34;
+
+    if self.output != &#39;ensemble&#39;:
+        raise ValueError(&#34;Final model only valid for ensemble output&#34;)
+
+    idx = range(self.data.shape[1])
+
+    df = pd.DataFrame(columns=model_ensemble.keys(), index=idx)
+    for key, value in model_ensemble.items():
+        coefs = value[1].params
+        feat_index = value[0]
+        for val in zip(feat_index, coefs):
+            df.loc[val[0], key] = val[1]
+
+    df.fillna(0, inplace=True)
+    df[&#39;mean&#39;] = df.mean(axis=1)
+
+    self.model_coef = np.array(df[df[&#39;mean&#39;] != 0][&#39;mean&#39;])  # mean for every feature coeff
+    self.model_features_num = list(df[df[&#39;mean&#39;] != 0].index)</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.fit"><code class="name flex">
+<span>def <span class="ident">fit</span></span>(<span>self, X_train: Union[numpy.ndarray, pandas.core.frame.DataFrame], Y_train: Union[numpy.ndarray, pandas.core.frame.DataFrame])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Learn the features to select from X_train.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>X_train</code></strong> :&ensp;<code>array-like</code> of <code>shape (n_samples, n_features)</code></dt>
+<dd>Training vectors, where <code>n_samples</code> is the number of samples and
+<code>n_features</code> is the number of features/predictors.</dd>
+<dt><strong><code>Y_train</code></strong> :&ensp;<code>array-like</code> of <code>shape (n_samples,)</code></dt>
+<dd>Target values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>Returns the instance itself.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fit(self, X_train: Union[np.ndarray, pd.DataFrame], Y_train: Union[np.ndarray, pd.DataFrame]):
+    &#34;&#34;&#34;
+    Learn the features to select from X_train.
+
+    Parameters
+    ----------
+    X_train : array-like of shape (n_samples, n_features)
+        Training vectors, where `n_samples` is the number of samples and
+        `n_features` is the number of features/predictors.
+
+    Y_train : array-like of shape (n_samples,)
+        Target values.
+
+    Returns
+    -------
+    self : object
+        Returns the instance itself.
+    &#34;&#34;&#34;
+
+    if isinstance(X_train, pd.DataFrame):
+        X_train = X_train.to_numpy()
+
+    if isinstance(Y_train, (pd.DataFrame, pd.Series)):
+        Y_train = Y_train.to_numpy()
+
+    self.n_samples, self.n_features = X_train.shape
+
+    # create vertical and horizontal partitions
+    distributed_features, distributed_samples = create_balanced_distributions(
+        labels=Y_train,
+        n_feats=self.n_features,
+        n_vbins=self.n_vbins,
+        n_hbins=self.n_hbins
+    )
+
+    # Initialization
+    self.J_star = {i: [] for i in range(self.n_hbins)}
+    self.J_best = {i: [0, 0] for i in range(self.n_hbins)}
+    self.results_full = {}
+    self.M_history = {}
+    self.n_iter_conv = self.n_runs
+    M = {i: 0 for i in range(self.n_hbins)}  # selected features
+    non_converged_hbins = np.arange(self.n_hbins).tolist()
+
+    if self.verbose:
+        print(
+            f&#34;Number of Samples: {self.n_samples}. Horizontal Disitribution SHAPE: {np.shape(distributed_samples)}&#34;)
+        print(
+            f&#34;Number of Features: {self.n_features}. Vertical Distribution SHAPE: {np.shape(distributed_features)}&#34;)
+
+    if self.n_hbins == 1 and self.n_vbins == 1:
+        if self.output == &#39;ensemble&#39;:
+            print(
+                &#34;WARNING: Ensemble output is not possible with n_hbins = 1 and n_vbins = 1. Setting output = &#39;single&#39;&#34;)
+        self.output = &#39;single&#39;
+
+        self.local_fs_method.fit(X_train, Y_train)
+        self.local_fs_method.get_support()
+        self.J_best = {0: [self.local_fs_method.get_support()]}
+        self.build_final_model(J_best=self.J_best)
+        return self.J_best
+
+    self.time_per_iteration = []
+    for r in range(self.n_runs):
+        start_time = time.time()
+        iter_results = {}  # initialise dictionary for storing results
+
+        if self.redistribute_features:
+            distributed_features, _ = create_balanced_distributions(
+                labels=Y_train,
+                n_feats=self.n_features,
+                n_vbins=self.n_vbins,
+                n_hbins=self.n_hbins
+            )
+        result_obj = []
+
+        def store_results(obj, indices, features_passed):  # callback for mp
+            performance = obj.get_best_performance() if hasattr(obj, &#39;get_best_performance&#39;) else None
+            result = self._Result(list(obj.get_support(indices=True)), indices, features_passed,
+                                  evaluation=performance)
+            result_obj.append(result)
+
+        pool = mp.Pool(processes=min((self.n_vbins * len(non_converged_hbins)), self.max_processes),
+                       maxtasksperchild=1)
+        for i, j in itertools.product(range(self.n_vbins), non_converged_hbins):
+            feature_partition = list(distributed_features[:, i])
+            feature_share = self.join_features(
+                features=feature_partition,
+                M=M[j]
+            )
+            features_passed = [int(i) for i in feature_share]
+            sample_indices = list(distributed_samples[:, j])
+
+            pool.apply_async(
+                self.local_fs_method.fit,
+                args=(X_train[:, features_passed][sample_indices, :], Y_train[sample_indices]),
+                callback=functools.partial(store_results, indices=(r, i, j), features_passed=features_passed)
+            )
+
+        pool.close()
+        pool.join()
+
+        if len(result_obj) != (
+                self.n_vbins * len(non_converged_hbins)):
+            print(
+                f&#34;result_obj length is {len(result_obj)}. Should be {(self.n_vbins * len(non_converged_hbins))}&#34;)
+
+        for result in result_obj:
+            # predict on all sub-processes
+            global_features = [result.features_passed[i] for i in result.features]
+            if result.evaluation is None:
+                result.model, result.evaluation = evaluate_interim_model(
+                    model_features=global_features,
+                    X=X_train,
+                    y=Y_train,
+                    metric=self.metric,
+                    model=self.estimator
+                )
+
+            iter_results[result.drfsc_index] = result
+
+        # check if every result is here
+        for i, j in itertools.product(range(self.n_vbins), non_converged_hbins):
+            if (r, i, j) not in [x.drfsc_index for x in result_obj]:
+                print(f&#34;missing result {(r, i, j)}&#34;)
+                iter_results[(r, i, j)] = [[0], 0, self.output, [0]]
+
+        # update full results dict
+        self.results_full, single_iter_results = self.update_full_results(
+            results_full=self.results_full,
+            iter_results=iter_results
+        )
+
+        # map local feature indices to global feature indices
+        single_iter_results = self.map_local_feats_to_gt(
+            iter_results=single_iter_results,
+            r=r,
+            hbins=non_converged_hbins
+        )
+
+        comb_sig_feats_gt = [model[0] for model in single_iter_results.values()]
+
+        # update the current best results
+        self.J_best, self.J_star = _update_best_models(
+            J_best=self.J_best,
+            J_star=self.J_star,
+            single_iter_results=single_iter_results,
+            non_converged_hbins=non_converged_hbins,
+            metric=self.metric
+        )
+
+        # update converged horizontal partitions
+        non_converged_hbins = self.convergence_check(
+            r=r,
+            J_star=self.J_star,
+            non_converged_hbins=non_converged_hbins
+        )
+
+        # update feature list shared with other partitions
+        M = self.feature_share(
+            r=r,
+            results_full=self.results_full,
+            comb_sig_feats_gt=comb_sig_feats_gt,
+            non_converged_hbins=non_converged_hbins,
+            M=M
+        )
+
+        print(f&#34;M: {M}&#34;) if self.verbose else None
+        self.M_history.update([(r, M)])
+
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        self.time_per_iteration.append(elapsed_time)
+        if len(non_converged_hbins) == 0:
+            self.n_iter_conv = r + 1
+            print(f&#34;All horizontal partitions have converged. Final iter count: {r + 1}&#34;)
+            break
+
+    self.labels = Y_train
+    self.data = X_train
+    self.build_final_model(J_best=self.J_best)
+
+    for value in self.results_full.values():
+        # remove the features_passed from results_full
+        value.pop()
+
+    return self</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.get_support"><code class="name flex">
+<span>def <span class="ident">get_support</span></span>(<span>self, indices=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the feature support mask or indices.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>indices</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If True, returns the indices of the supported features.
+If False (default), returns a boolean mask indicating supported features.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>numpy.ndarray</code></dt>
+<dd>If indices is True, a numpy array containing the indices of the supported features.
+If indices is False, a boolean mask indicating supported features.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>NotFittedError</code></dt>
+<dd>If the estimator is not fitted.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_support(self, indices=False):
+    &#34;&#34;&#34;
+    Get the feature support mask or indices.
+
+    Parameters
+    ----------
+    indices : bool, optional
+        If True, returns the indices of the supported features.
+        If False (default), returns a boolean mask indicating supported features.
+
+    Returns
+    -------
+    numpy.ndarray
+        If indices is True, a numpy array containing the indices of the supported features.
+        If indices is False, a boolean mask indicating supported features.
+
+    Raises
+    ------
+    NotFittedError
+        If the estimator is not fitted.
+    &#34;&#34;&#34;
+    check_is_fitted(self)
+    mask = np.zeros(self.n_features, dtype=bool)
+
+    if type(self.features_) is int:
+        mask[self.features_] = True
+    else:
+        mask[list(self.features_)] = True
+    return self.features_ if indices else mask</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.join_features"><code class="name flex">
+<span>def <span class="ident">join_features</span></span>(<span>self, features: list, M: Union[set, int]) ‑> list</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Joins the feature partitions to the relevant information from previous iterations.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>features</code></strong> :&ensp;<code>list</code></dt>
+<dd>Feature partition (list of features for the partition).</dd>
+<dt><strong><code>M</code></strong> :&ensp;<code>set</code> or <code>int</code></dt>
+<dd>Features selected at the previous round, feature list shared with other partitions.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>List of feature partition augmented with M (features selected at the previous round).</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def join_features(self, features: list, M: Union[set, int]) -&gt; list:
+    &#34;&#34;&#34;
+    Joins the feature partitions to the relevant information from previous iterations.
+
+    Parameters
+    ----------
+    features : list
+        Feature partition (list of features for the partition).
+    M : set or int
+        Features selected at the previous round, feature list shared with other partitions.
+
+    Returns
+    -------
+    list
+        List of feature partition augmented with M (features selected at the previous round).
+    &#34;&#34;&#34;
+    if isinstance(M, int):
+        return list(set(features).union([M]))
+
+    if isinstance(M, set):
+        return list(set(features).union(M))</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.map_local_feats_to_gt"><code class="name flex">
+<span>def <span class="ident">map_local_feats_to_gt</span></span>(<span>self, iter_results: dict, r: int, hbins: list) ‑> dict</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Maps local feature indices to global feature indices for each model in the current iteration.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>iter_results</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary with the results of the iteration.</dd>
+<dt><strong><code>r</code></strong> :&ensp;<code>int</code></dt>
+<dd>Number of the current iteration.</dd>
+<dt><strong><code>hbins</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of horizontal partitions that have not converged.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>iter_results</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dict updated with global feature indices.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def map_local_feats_to_gt(
+        self,
+        iter_results: dict,
+        r: int,
+        hbins: list
+) -&gt; dict:
+    &#34;&#34;&#34;
+    Maps local feature indices to global feature indices for each model in the current iteration.
+
+    Parameters
+    ----------
+    iter_results : dict
+        Dictionary with the results of the iteration.
+    r : int
+        Number of the current iteration.
+    hbins : list
+        List of horizontal partitions that have not converged.
+
+    Returns
+    -------
+    iter_results : dict
+        Dict updated with global feature indices.
+    &#34;&#34;&#34;
+    for i, j in itertools.product(range(self.n_vbins), hbins):
+        iter_results[(r, i, j)][0] = list(np.array(iter_results[(r, i, j)][2])[list(iter_results[(r, i, j)][0])])
+
+    return iter_results</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.set_fit_request"><code class="name flex">
+<span>def <span class="ident">set_fit_request</span></span>(<span>self: <a title="dfs.DFS" href="#dfs.DFS">DFS</a>, *, X_train: Union[bool, ForwardRef(None), str] = '$UNCHANGED$', Y_train: Union[bool, ForwardRef(None), str] = '$UNCHANGED$') ‑> <a title="dfs.DFS" href="#dfs.DFS">DFS</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Request metadata passed to the <code>fit</code> method.</p>
+<p>Note that this method is only relevant if
+<code>enable_metadata_routing=True</code> (see :func:<code>sklearn.set_config</code>).
+Please see :ref:<code>User Guide &lt;metadata_routing&gt;</code> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul>
+<li>
+<p><code>True</code>: metadata is requested, and passed to <code>fit</code> if provided. The request is ignored if metadata is not provided.</p>
+</li>
+<li>
+<p><code>False</code>: metadata is not requested and the meta-estimator will not pass it to <code>fit</code>.</p>
+</li>
+<li>
+<p><code>None</code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p>
+</li>
+<li>
+<p><code>str</code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p>
+</li>
+</ul>
+<p>The default (<code>sklearn.utils.metadata_routing.UNCHANGED</code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="admonition versionadded">
+<p class="admonition-title">Added in version:&ensp;1.3</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is only relevant if this estimator is used as a
+sub-estimator of a meta-estimator, e.g. used inside a
+:class:<code>~sklearn.pipeline.Pipeline</code>. Otherwise it has no effect.</p>
+</div>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>X_train</code></strong> :&ensp;<code>str, True, False,</code> or <code>None</code>,
+default=<code>sklearn.utils.metadata_routing.UNCHANGED</code></dt>
+<dd>Metadata routing for <code>X_train</code> parameter in <code>fit</code>.</dd>
+<dt><strong><code>Y_train</code></strong> :&ensp;<code>str, True, False,</code> or <code>None</code>,
+default=<code>sklearn.utils.metadata_routing.UNCHANGED</code></dt>
+<dd>Metadata routing for <code>Y_train</code> parameter in <code>fit</code>.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>self</code></strong> :&ensp;<code>object</code></dt>
+<dd>The updated object.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def func(**kw):
+    &#34;&#34;&#34;Updates the request for provided parameters
+
+    This docstring is overwritten below.
+    See REQUESTER_DOC for expected functionality
+    &#34;&#34;&#34;
+    if not _routing_enabled():
+        raise RuntimeError(
+            &#34;This method is only available when metadata routing is enabled.&#34;
+            &#34; You can enable it using&#34;
+            &#34; sklearn.set_config(enable_metadata_routing=True).&#34;
+        )
+
+    if self.validate_keys and (set(kw) - set(self.keys)):
+        raise TypeError(
+            f&#34;Unexpected args: {set(kw) - set(self.keys)}. Accepted arguments&#34;
+            f&#34; are: {set(self.keys)}&#34;
+        )
+
+    requests = instance._get_metadata_request()
+    method_metadata_request = getattr(requests, self.name)
+
+    for prop, alias in kw.items():
+        if alias is not UNCHANGED:
+            method_metadata_request.add_request(param=prop, alias=alias)
+    instance._metadata_request = requests
+
+    return instance</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.transform"><code class="name flex">
+<span>def <span class="ident">transform</span></span>(<span>self, X)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Reduce X to the selected features.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>X</code></strong> :&ensp;<code>array</code> of <code>shape [n_samples, n_features]</code></dt>
+<dd>The input samples.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>array</code> of <code>shape [n_samples, n_selected_features]</code></dt>
+<dd>The input samples with only the selected features.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def transform(self, X):
+    &#34;&#34;&#34;
+    Reduce X to the selected features.
+
+    Parameters
+    ----------
+    X : array of shape [n_samples, n_features]
+        The input samples.
+
+    Returns
+    -------
+    array of shape [n_samples, n_selected_features]
+        The input samples with only the selected features.
+    &#34;&#34;&#34;
+    mask = self.get_support()
+    if not mask.any():
+        warnings.warn(
+            (
+                &#34;No features were selected: either the data is&#34;
+                &#34; too noisy or the selection test too strict.&#34;
+            ),
+            UserWarning,
+        )
+        if hasattr(X, &#34;iloc&#34;):
+            return X.iloc[:, :0]
+        return np.empty(0, dtype=X.dtype).reshape((X.shape[0], 0))
+    return _safe_indexing(X, mask, axis=1)</code></pre>
+</details>
+</dd>
+<dt id="dfs.DFS.update_full_results"><code class="name flex">
+<span>def <span class="ident">update_full_results</span></span>(<span>self, results_full: dict, iter_results: dict)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Updates the full results dictionary with the results from the current iteration.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>results_full</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary containing the results from all iterations.</dd>
+<dt><strong><code>iter_results</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary containing the results from the current iteration.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>results_full</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Updated full result dictionary.</dd>
+<dt><strong><code>single_iter_results</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Dictionary containing the results from the current iteration where values are list of 3 elements:
+selected features, evaluation and initial features (one partition augmented with features from previous round)
+on which feature selection is applied.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_full_results(
+        self,
+        results_full: dict,
+        iter_results: dict
+):
+    &#34;&#34;&#34;
+    Updates the full results dictionary with the results from the current iteration.
+
+    Parameters
+    ----------
+    results_full : dict
+        Dictionary containing the results from all iterations.
+    iter_results : dict
+        Dictionary containing the results from the current iteration.
+
+    Returns
+    -------
+    results_full : dict
+        Updated full result dictionary.
+    single_iter_results : dict
+        Dictionary containing the results from the current iteration where values are list of 3 elements:
+        selected features, evaluation and initial features (one partition augmented with features from previous round)
+        on which feature selection is applied.
+    &#34;&#34;&#34;
+    single_iter_results = {
+        result.drfsc_index:
+            [result.features, result.evaluation, result.features_passed] for result in iter_results.values()
+    }
+    results_full |= single_iter_results
+    return results_full, single_iter_results</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="dfs.DFS" href="#dfs.DFS">DFS</a></code></h4>
+<ul class="">
+<li><code><a title="dfs.DFS.build_final_model" href="#dfs.DFS.build_final_model">build_final_model</a></code></li>
+<li><code><a title="dfs.DFS.convergence_check" href="#dfs.DFS.convergence_check">convergence_check</a></code></li>
+<li><code><a title="dfs.DFS.feature_share" href="#dfs.DFS.feature_share">feature_share</a></code></li>
+<li><code><a title="dfs.DFS.final_model" href="#dfs.DFS.final_model">final_model</a></code></li>
+<li><code><a title="dfs.DFS.fit" href="#dfs.DFS.fit">fit</a></code></li>
+<li><code><a title="dfs.DFS.get_support" href="#dfs.DFS.get_support">get_support</a></code></li>
+<li><code><a title="dfs.DFS.join_features" href="#dfs.DFS.join_features">join_features</a></code></li>
+<li><code><a title="dfs.DFS.map_local_feats_to_gt" href="#dfs.DFS.map_local_feats_to_gt">map_local_feats_to_gt</a></code></li>
+<li><code><a title="dfs.DFS.set_fit_request" href="#dfs.DFS.set_fit_request">set_fit_request</a></code></li>
+<li><code><a title="dfs.DFS.transform" href="#dfs.DFS.transform">transform</a></code></li>
+<li><code><a title="dfs.DFS.update_full_results" href="#dfs.DFS.update_full_results">update_full_results</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
