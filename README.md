@@ -24,7 +24,10 @@ pip install distfeatselect
 ```
 
 ## Documentation
-
+- [Quick start notebook](https://dkudumovic1.github.io/distfeatselect/distfeatselect_Quick_start.ipynb)
+- [DFS API Docs](https://dkudumovic1.github.io/distfeatselect/dfs.html)
+- [RFS API Docs](https://dkudumovic1.github.io/distfeatselect/rfs.html)
+  
 ## References
 The algorithms integrated into these packages have their foundations in rigorous academic research. Specifically, the methodology employed is derived from the research papers [1] and [2]. By implementing the insights and techniques outlined in this scholarly work, the packages aim to provide users with efficient and effective solutions informed by the latest advancements in the field.
 
