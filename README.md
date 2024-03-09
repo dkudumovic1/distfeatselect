@@ -26,7 +26,7 @@ pip install distfeatselect
 ```
 
 ## Documentation
-- [Quick start notebook](https://dkudumovic1.github.io/distfeatselect/distfeatselect_Quick_start.ipynb)
+- [Quick start notebook](https://dkudumovic1.github.io/distfeatselect/quick_start.html)
 - [DFS API Docs](https://dkudumovic1.github.io/distfeatselect/dfs.html)
 - [RFS API Docs](https://dkudumovic1.github.io/distfeatselect/rfs.html)
   
