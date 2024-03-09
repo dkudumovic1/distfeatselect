@@ -10,7 +10,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.model_selection import train_test_split
 import statsmodels.discrete.discrete_model as sm
 import warnings
-from utils import model_score
+from .utils import model_score
 from sklearn.svm import SVC
 from sklearn.utils.validation import check_is_fitted
 from sklearn.utils import _safe_indexing

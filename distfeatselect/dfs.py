@@ -14,9 +14,9 @@ from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.utils import _safe_indexing
 from sklearn.utils.validation import check_is_fitted
 
-from utils import create_balanced_distributions
-from utils import evaluate_interim_model
-from utils import remove_feature_duplication
+from .utils import create_balanced_distributions
+from .utils import evaluate_interim_model
+from .utils import remove_feature_duplication
 
 
 class DFS(BaseEstimator, TransformerMixin):
