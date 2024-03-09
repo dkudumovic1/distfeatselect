@@ -1,9 +1,15 @@
 from distutils.core import setup
 
+from pathlib import Path
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
+
 setup(name='distfeatselect',
       packages=['distfeatselect'],
-      version='0.1.0',
+      version='0.1.1',
       description='A Pyhton package implementing distributed feature selection algorithm.',
+      long_description=long_description,
+      long_description_content_type='text/markdown',
       url='https://github.com/dkudumovic1/distfeatselect',
       download_url='https://github.com/dkudumovic1/distfeatselect/archive/refs/tags/0.1.0.tar.gz',
       author='Dzeneta Kudumovic',
