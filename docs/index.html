@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>distfeatselect</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #b53f3f;
+        }
+        h2 {
+            font-size: 2em;
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 1em;
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        a {
+            color: #993333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #cc3333;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>distfeatselect</h1>
+        <p>distfeatselect: distributed feature selection</p>
+
+        <h2>Authors and Contributors</h2>
+        <p><a href="https://github.com/dkudumovic1" style="color: #555;">Dzeneta Kudumovic</a>, <a href="https://github.com/aibrank" style="color: #555;">Aida Brankovic</a></p>
+
+        <h2>Documentation</h2>
+        <ul>
+            <li><a href="https://dkudumovic1.github.io/distfeatselect/quick_start.html" style="color: #555;"><strong><u>Quick start notebook</u></strong></a></li>
+            <li><a href="https://dkudumovic1.github.io/distfeatselect/dfs.html" style="color: #555;"><strong><u>DFS API Docs</u></strong></a></li>
+            <li><a href="https://dkudumovic1.github.io/distfeatselect/rfs.html" style="color: #555;"><strong><u>RFS API Docs</u></strong></a></li>
+        </ul>
+
+        <h2>Overview</h2>
+        <p>distfeatselect is a Python package implementing an innovative Distributed Feature Selection algorithm based on vertical data partitioning and distributed searching. By dividing features into subsets and assigning dedicated processors for local searches, the algorithm achieves parallelism and scalability, making it suitable for large-scale datasets. The distributed architecture enhances efficiency by operating on smaller search spaces, reducing computational time. Moreover, algorithm's tendency to produce simple model structures enhances interpretability and robustness.</p>
+        <p>The DFS (Distributed Feature Selection) algorithm is implemented as a scikit-learn-compatible transformer, adhering to the scikit-learn API standards. This enables seamless integration into scikit-learn workflows, empowering users to incorporate distributed feature selection into their machine learning pipelines.</p>
+        <p>To get started with distfeatselect, explore our provided notebooks, which offer hands-on examples and demonstrations of the package's functionality.</p>
+
+        <h3>Requirements</h3>
+        <p>The package dcor depends on the following libraries:</p>
+        <ul>
+            <li>numpy</li>
+            <li>pandas</li>
+            <li>statsmodels</li>
+            <li>scikit-learn</li>
+            <li>dcor</li>
+        </ul>
+
+        <h2>Installation</h2>
+        <p>distfeatselect is on PyPi and can be installed using pip:</p>
+        <pre><code>pip install distfeatselect</code></pre>
+
+        <h2>References</h2>
+        <p>The algorithms integrated into these packages have their foundations in rigorous academic research. Specifically, the methodology employed is derived from the research papers <a href="https://ieeexplore.ieee.org/document/7890437" style="color: #555;">[1]</a> and <a href="https://link.springer.com/article/10.1007/s10994-019-05809-y" style="color: #555;">[2]</a>. By implementing the insights and techniques outlined in this scholarly work, the packages aim to provide users with efficient and effective solutions informed by the latest advancements in the field.</p>
+        <p>Additionally, users interested in further understanding the underlying methodologies are encouraged to refer to the following research papers:</p>
+        <ul>
+            <li>Brankovic, A., Falsone, A., Prandini, M., Piroddi, L. (2018). <a href="https://ieeexplore.ieee.org/document/7890437" style="color: #555;">A feature selection and classification algorithm based on randomized extraction of model populations</a></li>
+            <li>Brankovic, A., Piroddi, L. (2019). <a href="https://link.springer.com/article/10.1007/s10994-019-05809-y" style="color: #555;">A distributed feature selection scheme with partial information sharing</a></li>
+        </ul>
+
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License.</p>
+    </div>
+</body>
+</html>
