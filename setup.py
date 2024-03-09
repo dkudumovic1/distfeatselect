@@ -28,7 +28,7 @@ setup(name='distfeatselect',
           'pandas',
           'statsmodels',
           'scikit-learn',
-          'dcor==0.6',
+          'dcor',
       ],
 
       classifiers=[
