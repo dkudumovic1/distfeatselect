@@ -4,6 +4,11 @@ from pathlib import Path
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
+project_urls = {
+  'Documentation': 'https://dkudumovic1.github.io/distfeatselect/'
+}
+
+
 setup(name='distfeatselect',
       packages=['distfeatselect'],
       version='0.1.1',
@@ -16,6 +21,7 @@ setup(name='distfeatselect',
       author_email='dzeneta.kudum@gmail.com',
       keywords=['feature selection', 'distributed feature selection', 'randomised feature selection'],
       license='MIT',
+      project_urls=project_urls,
 
       install_requires=[
           'numpy',
