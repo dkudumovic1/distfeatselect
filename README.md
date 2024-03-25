@@ -31,11 +31,13 @@ pip install distfeatselect
 - [RFS API Docs](https://dkudumovic1.github.io/distfeatselect/rfs.html)
   
 ## References
-The algorithms integrated into these packages have their foundations in rigorous academic research. Specifically, the methodology employed is derived from the research papers [1] and [2]. By implementing the insights and techniques outlined in this scholarly work, the packages aim to provide users with efficient and effective solutions informed by the latest advancements in the field.
+The algorithms integrated into these packages have their foundations in rigorous academic research. Specifically, the methodology employed is derived from the research papers [1], [2] and [3]. By implementing the insights and techniques outlined in this scholarly work, the packages aim to provide users with efficient and effective solutions informed by the latest advancements in the field.
 
 [1] Brankovic, A., Falsone, A., Prandini, M., Piroddi, L. (2018). [A feature selection and classification algorithm based on randomized extraction of model populations](https://ieeexplore.ieee.org/document/7890437)
 
 [2] Brankovic, A., Piroddi, L. (2019). [A distributed feature selection scheme with partial information sharing](https://link.springer.com/article/10.1007/s10994-019-05809-y)
+
+[3] Brankovic, A., Hosseini, M., Piroddi, L. (2018). [A Distributed Feature Selection Algorithm Based on Distance Correlation with an Application to Microarrays](https://ieeexplore.ieee.org/abstract/document/8356595)
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
