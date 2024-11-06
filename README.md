@@ -2,7 +2,7 @@
 distfeatselect: distributed feature selection
 
 ## Authors and Contributors
-[Dzeneta Kudumovic](https://github.com/dkudumovic1), [Dr Aida Brankovic](https://github.com/aibrank), [Prof Luigi Piroddi](https://www.deib.polimi.it/eng/people/details/318548#:~:text=Born%20in%20London%20in%201966,D)
+[Dzeneta Kudumovic](https://github.com/dkudumovic1), [Dr Aida Brankovic](https://au.linkedin.com/in/dr-aida-brankovic-phd-it-msc-ee-4616a038), [Prof Luigi Piroddi](https://www.deib.polimi.it/eng/people/details/318548#:~:text=Born%20in%20London%20in%201966,D)
 
 ## Overview
 distfeatselect is a Python package implementing an innovative Distributed Feature Selection algorithm based on vertical data partitioning and distributed searching. By dividing features into subsets and assigning dedicated processors for local searches, the algorithm achieves parallelism and scalability, making it suitable for large-scale datasets. The distributed architecture enhances efficiency by operating on smaller search spaces, reducing computational time. Moreover, algorithm's tendency to produce simple model structures enhances interpretability and robustness. 
