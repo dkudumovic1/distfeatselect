@@ -214,6 +214,11 @@ class RFS(BaseEstimator, TransformerMixin):
             max_indices = [index for index, value in indices_and_values[:n_feats]]
             self.features_ = max_indices
 
+        if isinstance(X_train, pd.DataFrame):
+          X_train = X_train.to_numpy()
+        if isinstance(Y_train, pd.DataFrame):
+          Y_train = Y_train.to_numpy()
+
         if self.method == "dcor":
             self.best_performance_ = distance_correlation(X_train[:, self.features_], Y_train)
         if self.method in ["logit", "L1_logit"]:

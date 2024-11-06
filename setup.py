@@ -11,7 +11,7 @@ project_urls = {
 
 setup(name='distfeatselect',
       packages=['distfeatselect'],
-      version='0.1.3',
+      version='0.1.4',
       description='A Pyhton package implementing distributed feature selection algorithm.',
       long_description=long_description,
       long_description_content_type='text/markdown',
